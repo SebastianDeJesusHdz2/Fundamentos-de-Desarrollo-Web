@@ -5,20 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi página</title>
+
+    <link rel="stylesheet" href="styes.css">
+
+    <style>
+        h1 {
+            color: red;
+            background-color: aqua;
+        }
+
+        li {
+            color: green;
+        }
+
+        .textomorado {
+            color: purple;
+        }
+
+        #subtitulo {
+            color: green;
+        }
+
+    </style>
 </head>
 
 <body>
-    <h1>Hola mundo</h1>
-    <h2 id="encabezado">Hola mundo</h2>
-    <h3>Hola mundo</h3>
-    <h4>Hola mundo</h4>
-    <h5> Hola mundo</h5>
+    <h1 style="color: blue;">Hola mundo</h1>
+    <div style="background-color: blue;">
+        <h2 id="encabezado">Hola mundo</h2>
+        <h3>Hola mundo</h3>
+    </div>
+    <h4 id="subtitulo">Hola mundo</h4>
+    <h5 class="textomorado"> Hola mundo</h5>
     <h6>Hola mundo</h6>
 
-    <p>Lorem ipsum dolor sit <b>amet consectetur adipisicing elit.</b> Aliquam blanditiis eligendi accusantium eveniet dolores
-        eaque vel cumque. <br> Cumque nulla eius quaerat natus, sunt unde autem, minus nihil quia at blanditiis?Lorem ipsum
+    <table> border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Carrera</th>
+            <th>Semestre</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Ana</td>
+            <td class="textomorado">20</td>
+            <td>Ingeniería en Sistemas</td>
+            <td>4to</td>
+        </tr>
+        <tr>
+            <td>Luis</td>
+            <td>22</td>
+            <td>Medicina</td>
+            <td>6to</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>21</td>
+            <td>Derecho</td>
+            <td>5to</td>
+        </tr>
+    </table>
+
+    <form action="./registro.html" method="get">
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name="" id="telefono">
+        <input type="password">
+        <input type="text">
+        <input type="checkbox">
+        <input type="color">
+        <input type="file" class="textomorado">
+
+
+    </form>
+    <form action="./registro.html" method="get">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required minlength="4" placeholder="Ingresa tu usuario">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required maxlength="4">
+        <input type="number" min="10" max="20">
+        <button type="submit">login</button>
+    </form>
+
+
+
+    <p>Lorem ipsum dolor sit <b>amet consectetur adipisicing elit.</b> Aliquam blanditiis eligendi accusantium eveniet
+        dolores
+        eaque vel cumque. <br> Cumque nulla eius quaerat natus, sunt unde autem, minus nihil quia at blanditiis?Lorem
+        ipsum
         dolor sit amet consectetur, adipisicing elit. Adipisci obcaecati, expedita cumque eligendi possimus perspiciatis
-        ab totam debitis id quod <i>itaque asperiores minus consequuntur</i>, cum qui numquam voluptas atque omnis. Lorem ipsum
+        ab totam debitis id quod <i>itaque asperiores minus consequuntur</i>, cum qui numquam voluptas atque omnis.
+        Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Unde, maiores nisi cum velit nesciunt voluptates veritatis
         temporibus voluptate eius minus. Ipsa autem at voluptate eveniet tenetur dolor nihil asperiores ea.
     <p id="parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit nisi placeat
@@ -27,7 +103,18 @@
         fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aspernatur aliquam distinctio ullam. Id
         non eligendi ipsam, tenetur fugit, soluta cupiditate maxime atque laudantium quas debitis! Laudantium maxime at
         minus!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis eligendi accusantium eveniet dolores
+    <p>Lorem ipsum dolor sit amet <span style="color: blue; font-size: larger;"> consectetur adipisicing elit. Aliquam blanditiis eligendi accusantium eveniet dolores
+        eaque vel cumque. Cumque nulla eius quaerat natus, sunt unde autem, minus nihil quia at blanditiis?Lorem ipsum
+        dolor sit amet consectetur, </span> adipisicing elit. Adipisci obcaecati, expedita cumque eligendi possimus perspiciatis
+        ab totam debitis id quod itaque asperiores minus consequuntur, cum qui numquam voluptas atque omnis. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Unde, maiores nisi cum velit nesciunt voluptates veritatis
+        temporibus voluptate eius minus. Ipsa autem at voluptate eveniet tenetur dolor nihil asperiores ea.
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit nisi placeat quisquam,
+        voluptatum consequatur ducimus quos in earum qui laudantium. Doloremque cum minus nam numquam velit, et aut
+        fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aspernatur aliquam distinctio ullam. Id
+        non eligendi ipsam, tenetur fugit, soluta cupiditate maxime atque laudantium quas debitis! Laudantium maxime at
+        minus!</p>
+    <p style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis eligendi accusantium eveniet dolores
         eaque vel cumque. Cumque nulla eius quaerat natus, sunt unde autem, minus nihil quia at blanditiis?Lorem ipsum
         dolor sit amet consectetur, adipisicing elit. Adipisci obcaecati, expedita cumque eligendi possimus perspiciatis
         ab totam debitis id quod itaque asperiores minus consequuntur, cum qui numquam voluptas atque omnis. Lorem ipsum
@@ -44,18 +131,7 @@
         ab totam debitis id quod itaque asperiores minus consequuntur, cum qui numquam voluptas atque omnis. Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Unde, maiores nisi cum velit nesciunt voluptates veritatis
         temporibus voluptate eius minus. Ipsa autem at voluptate eveniet tenetur dolor nihil asperiores ea.
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit nisi placeat quisquam,
-        voluptatum consequatur ducimus quos in earum qui laudantium. Doloremque cum minus nam numquam velit, et aut
-        fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aspernatur aliquam distinctio ullam. Id
-        non eligendi ipsam, tenetur fugit, soluta cupiditate maxime atque laudantium quas debitis! Laudantium maxime at
-        minus!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis eligendi accusantium eveniet dolores
-        eaque vel cumque. Cumque nulla eius quaerat natus, sunt unde autem, minus nihil quia at blanditiis?Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Adipisci obcaecati, expedita cumque eligendi possimus perspiciatis
-        ab totam debitis id quod itaque asperiores minus consequuntur, cum qui numquam voluptas atque omnis. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Unde, maiores nisi cum velit nesciunt voluptates veritatis
-        temporibus voluptate eius minus. Ipsa autem at voluptate eveniet tenetur dolor nihil asperiores ea.
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit nisi placeat quisquam,
+    <p class="textomorado">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit nisi placeat quisquam,
         voluptatum consequatur ducimus quos in earum qui laudantium. Doloremque cum minus nam numquam velit, et aut
         fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aspernatur aliquam distinctio ullam. Id
         non eligendi ipsam, tenetur fugit, soluta cupiditate maxime atque laudantium quas debitis! Laudantium maxime at
