@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/fondo.jpg");
+    padding-top: 20px;
+}
+
+.card {
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    /* Esto pega los contenedores perfectamente */
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    width: 100%;
+    height: 55%;
+}
+
+/* Asegura que la imagen llene su espacio sin dejar huecos */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.text-container {
+    width: 100%;
+    height: 45%;
+    background-color: white;
+    padding: 25px 25px;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+hr {
+    border: dotted grey 1px;
+}
+
+p {
+    color: grey;
+}
+
+button {
+    margin: auto;
+    display: block;
+    background-color: red;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 14px;
+    width: 180px;
+}
