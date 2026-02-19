@@ -18,7 +18,6 @@ body {
     width: 500px;
     height: 600px;
     margin: auto;
-    /* Esto pega los contenedores perfectamente */
     display: flex;
     flex-direction: column;
 }
@@ -28,7 +27,6 @@ body {
     height: 55%;
 }
 
-/* Asegura que la imagen llene su espacio sin dejar huecos */
 .image-container img {
     width: 100%;
     height: 100%;
