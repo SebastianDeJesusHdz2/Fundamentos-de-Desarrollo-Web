@@ -1,0 +1,97 @@
+/* Reseteo: el padding no suma al ancho y quita márgenes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centrado total del contenido en la pantalla */
+body {
+    background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal con ancho responsivo */
+.main-container {
+    width: 90vw;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tarjeta centrada con ancho máximo */
+.card {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Estilo de títulos: color verde y centrado */
+h1 {
+    color: green;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Párrafos: tamaño de fuente y color gris oscuro */
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Selector de clase: fondo azul claro y negritas */
+.especial {
+    background: lightblue;
+    font-weight: bold;
+}
+
+/* Selector de ID: fondo rojo (prioridad alta) */
+#importante {
+    background: red;
+    color: white;
+}
+
+/* Enlaces: tamaño grande y sin subrayado */
+a {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Línea divisoria punteada */
+hr {
+    border: dotted grey 1px;
+}
+
+/* Imágenes: cubren su contenedor sin deformarse */
+img {
+    width: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Selector de atributo: bordes azules para inputs con texto */
+input[placeholder] {
+    border: 1px solid blue;
+    padding: 5px;
+}
+
+/* Selector de atributo: fondo gris para contraseñas */
+input[type="password"] {
+    background: lightgray;
+}
+
+/* Botones: estilo bloque, color negro y cursor de mano */
+button, .boton {
+    background: black;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
