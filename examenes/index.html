@@ -1,13 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Examen 1</title>
-</head>
-<body>
-    <h1>Este es mi examen 1</h1>
 
-    <h2>Hola mundo</h2>
-</body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #e6d5c8;
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin: 20%;
+      }
+
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        background-color: white;
+        width: 350px;
+        padding: 80px 30px 30px 30px;
+        border-radius: 30px;
+        text-align: center;
+        position: relative;
+        margin-top: 50px;
+      }
+
+      .image-container img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .Text1 {
+        color: orange;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .Text2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+      }
+
+      .Icon i {
+        background-color: #e6e3e3;
+        color: #334155;
+        padding: 5px;
+        border-radius: 20%;
+        font-size: 18px;
+      }
+
+      button {
+        background-color: orange;
+        color: white;
+        border: none;
+        width: 50%;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 20px;
+      }
+
+      img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .Icon i.fa-twitter {
+        background-color: aqua;
+        color: white;
+      }
+
+      .Icon i.fa-linkedin {
+        color: blue;
+      }
+      
+      .Icon i.fa-envelope {
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="card">
+        <div class="image-container"><img src="./persona.jpg" alt="" /></div>
+        <h1>Sofia Martinez</h1>
+        <p class="Text1">Web Developer</p>
+        <p class="Text2">
+          Passionate web developer specializing <br />
+          in modern JavaScript frameworks
+        </p>
+        <div class="Icon">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <button>Contact Me</button>
+      </div>
+    </div>
+  </body>
 </html>
