@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.titulo {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuerpo-pagina {
+  display: flex;
+  flex-grow: 1;
+}
+
+.lateral {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  flex: 1;
+}
+
+.central {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  flex: 2;
+}
