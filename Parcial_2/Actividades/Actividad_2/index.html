@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Bruce Wayne - Ejercicio Media Queries</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .principal {
+        padding: 20px;
+      }
+
+      .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .columna {
+        padding: 20px;
+      }
+
+      ul {
+        margin-left: 20px;
+      }
+
+      li {
+        color: blue;
+      }
+
+      li strong {
+        color: black;
+      }
+
+      .columna1 li {
+        color: grey;
+      }
+
+      @media (width < 600px) {
+        .columna1 {
+          width: 100%;
+        }
+        .columna2 {
+          width: 100%;
+        }
+        .columna ul {
+            list-style-type: none;
+        }
+
+        .columna li strong {
+            display: block;
+        }
+
+        .columna h2 {
+          border-bottom: solid 1px grey;
+          padding-bottom: 5px;  
+        }
+      }
+
+      @media (600px <= width < 1200px) {
+        .columna1 {
+          width: 50%;
+        }
+
+        .columna2 {
+            width: 50%;
+        }
+
+        .columna1 ul {
+            list-style-type: none;
+        }
+
+        .columna1 li strong {
+            display: block;
+        }
+      }
+
+      @media (width >= 1200px) {
+        .columna1 {
+            width: 33.33%;
+        }
+
+        .columna2 {
+            width: 66.66%;
+            display: flex;
+        }
+        
+        .columna2 div {
+            width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="principal">
+      <h1>Curriculum Vitae de Bruce Wayne</h1>
+    </div>
+
+    <div class="contenedor">
+      <div class="columna columna1">
+        <h2>Datos personales</h2>
+        <ul>
+          <li>Nombre completo: <strong>Bruce Wayne</strong></li>
+          <li>Fecha de nacimiento: <strong>1/5/1939</strong></li>
+          <li>Lugar de nacimiento: <strong>Gotham City</strong></li>
+        </ul>
+      </div>
+      <div class="columna2">
+        <div class="columna">
+          <h2>Formación académica</h2>
+          <ul>
+            <li>1956-1961: <strong>Universidad del Espantapájaros</strong></li>
+            <li>1952-1956: <strong>Instituto de Dos Caras</strong></li>
+            <li>1944-1952: <strong>Escuela Primaria del Joker</strong></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h2>Experiencia laboral</h2>
+          <ul>
+            <li>1975-1985: <strong>En el paro</strong></li>
+            <li>1965-1975: <strong>Cazavillanos y demás chusma</strong></li>
+            <li>1962-1965: <strong>Aprendiz de superhéroe</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
