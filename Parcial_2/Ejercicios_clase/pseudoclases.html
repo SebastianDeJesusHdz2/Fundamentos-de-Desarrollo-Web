@@ -10,16 +10,21 @@
             width: 250px;
             height: 250px;
             background-color: blue;
-            transition-property: background-color;
+            /* transition-property: background-color width;
             transition-duration: 3s;
-            /* transition-delay: 2s; */
-            transition-timing-function: ease-in-out;
+            transition-delay: 2s;
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+            transition: float 3s 0s linear;
+            margin: 5px;
+            display: block;
+            float: left;
         }
 
-        div:hover {
+        div:active {
             background-color: red;
             width: 1000px;
             height: 500px;
+            display: inline-block;
         }
 
         p {
@@ -39,6 +44,8 @@
     </style>
 </head>
 <body>
+    <div></div>
+    <div></div>
     <div></div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ullam eligendi excepturi ipsam nam, corporis nostrum. Commodi quos id voluptate quis ipsum modi consequatur minus totam illo deleniti, minima sint!</p>
     <input type="text">
