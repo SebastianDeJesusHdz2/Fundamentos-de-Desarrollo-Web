@@ -4,16 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
+
+    <style>
+      .textoRojo {
+        color: red;
+        font-size: 45px;
+      }
+    </style>
   </head>
   <body>
     <h1>Hola mundo</h1>
+    <h1 id="elemento" style="color: red;">Hola mundo</h1>
+    <h1 class="Texto">Hola mundo</h1>
+    <h2 class="Texto">Hola mundo</h2>
     <h1>Hola mundo</h1>
+    <h1 class="Texto">Hola mundo</h1>
     <h1>Hola mundo</h1>
-    <h2>Hola mundo</h2>
-    <h1>Hola mundo 2</h1>
+
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus rerum eos tenetur vel sunt repellat nostrum blanditiis totam provident quasi earum sint. Nisi in similique, temporibus vitae fugiat omnis!</p>
+    </div>
+
+    <a href="#">Ir a google</a>
+    <img src="" alt="">
+
     <script>
-      const h1 = document.querySelector("h1");
-      console.log(h1);
+      const h1 = document.querySelector("elemento");
+      const elements = document.querySelectorAll("h1");
+      const h2 = document.querySelector("h2");
+      //const h1 = document.getElementsById("elemento");
+      const textos = document.getElementsByClassName("Texto");
+
+      //console.log(h1);
+      //console.log(elements);
+      h1.textContent = "Hola a todos";
+      h1.style.color = "blue";
+      h1.style.fontSize = "";
+      h1.className = "textoRojo encabezado titulo";
+      h2.textContent = "Hola a todos";
+      h1.classList.add("textoRojo");
+      h1.classList.add("titulo");
+      h1.classList.remove(... h1.classList);
+      h1.classList.toggle("textoRojo");
+
+      const div = document.querySelector("div");
+      div.textContent = " <p> Hola mundo desde 75 </p>";
+      div.innerHTML = " <p> Hola mundo desde 75 </p> + <p> Este es otro párrafo </p>";
+      console.log(textos);
+      const a = document.querySelector("a");
+      a.href = "https://www.google.com";
+      const img = document.querySelector("img");
+      img.src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+
+
+      function createElement () {
+        const p = document.createElement("p");
+        p.textContent = "Elemento creado desde JavaScript";
+        div.appendChild(p);
+      }
+
+      function removeElement () {
+        const p = document.querySelector("p");
+        div.removeChild(p);
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos JS</title>
+
+    <style>
+        .containuer {
+            flex-wrap: wrap;
+            gap: 5px
+        }
+
+        .element {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+  </head>
+
+  <body onLoad="saludar()">
+    
+    <button onclick="CrearElemento()">Agregar elemento</button>
+    <div class="container">
+        
+    </div>
+
+    <!-- Tarea uno con esto de rgb para esos elementos y otro para un input de tipo color que haga lo mismo -->
+    <br>
+    <label for="">R</label>
+    <input type="text">
+    <label for="">G</label>
+    <input type="text">
+    <label for="">B</label>
+    <input type="text">
+    <br>
+
+
+
+
+    <form action="">
+        <button type="button" onclick="saludar(event)" onmouseenter="saludar(event)">Hola</button>
+    </form>
+
+    <input type="text" onkeypress="saludar(event)">
+
+    <input type="text" onblur="saludar(event)" onfocus="saludar(event)">
+
+    <p onclick="saludar()">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti debitis
+      aspernatur ipsam praesentium voluptatem, repudiandae eos corrupti dolores
+      nulla magnam odio sequi cum ad consectetur vel natus mollitia voluptate
+      distinctio!
+    </p>
+
+
+
+    <button onclick="saludar()">Hola</button>
+    <script>
+        const container = document.querySelector(".container");
+        const input = document.querySelector("input");
+        let counter = 0;
+
+        function CrearElemento() {
+            counter++;
+            const element = document.createElement("div");
+            element.classList.add("element");
+            element.textContent = input.value;
+            container.appendChild(element);
+
+            input.value = "";
+        }
+
+      function saludar(event) {
+        console.log(event);
+      }
+    </script>
+  </body>
+</html>
