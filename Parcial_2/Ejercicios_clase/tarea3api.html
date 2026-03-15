@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .card {
+        background-color: #f0f2f5;
+        border-radius: 10px;
+        padding: 15px;
+        width: 200px;
+        text-align: center;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body onload="cargar()">
+
+    <div id="contenedor" class="container"></div>
+
+    <script>
+
+      async function cargar() {
+
+        const result = await fetch(
+          "https://rickandmortyapi.com/api/character",
+        ).then((response) => response.json());
+        const personajes = result.results;
+        const contenedor = document.getElementById("contenedor");
+        for (let i = 0; i < personajes.length; i++) {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          const imagen = document.createElement("img");
+          imagen.src = personajes[i].image;
+
+          const nombre = document.createElement("h3");
+          nombre.textContent = personajes[i].name;
+
+          card.appendChild(imagen);
+          card.appendChild(nombre);
+          contenedor.appendChild(card);
+
+        }
+
+      }
+      
+    </script>
+  </body>
+</html>
