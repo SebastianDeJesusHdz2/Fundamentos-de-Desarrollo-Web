@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.principal {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.formulario {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 5px;
+    width: 60%;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.tarjeta span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.tarjeta button {
+    margin-left: 5px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.completada {
+    background-color: green;
+}
+
+@media (width >= 750px) {
+    .tarjeta {
+        width: 48%;
+    }
+}
+
+.completada button {
+    display: none;
+}
