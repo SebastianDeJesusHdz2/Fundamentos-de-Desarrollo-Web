@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor - Axioma</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <nav class="nav">
+        <a href="main/index.html" class="logo">Axioma</a>
+        <ul class="mn">
+            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
+            <li><a href="explorador/index.html" class="lk">Explorar</a></li>
+            <li><a href="panel_autor/index.html" class="lk on">Mis Obras</a></li>
+        </ul>
+        <div class="act">
+            <div id="a1">
+                <a href="perfil/index.html" id="a2" class="usr"></a>
+                <button id="a3" class="btn btn-d">Salir</button>
+            </div>
+        </div>
+    </nav>
+    <main class="ed-wrap">
+        <aside class="ed-side">
+            <button id="a4" class="btn btn-o btn-fw">Volver al Panel</button>
+            <h3 class="side-t">Metadatos</h3>
+            <label for="a5">Título</label>
+            <input type="text" id="a5">
+            <label for="a6">Clasificación</label>
+            <select id="a6">
+                <option value="libro">Libro</option>
+                <option value="investigacion">Investigación</option>
+            </select>
+            <label for="a7">Estado</label>
+            <select id="a7">
+                <option value="borrador">Borrador</option>
+                <option value="publicada">Publicada</option>
+            </select>
+            <button class="btn btn-p btn-fw" id="a8">Guardar Obra</button>
+        </aside>
+        <div class="ed-area">
+            <div class="ed-box" id="a9" contenteditable="true"></div>
+        </div>
+    </main>
+    <div id="a10" class="toast-box"></div>
+    <script src="editor/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil - Axioma</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <nav class="nav">
+        <a href="main/index.html" class="logo">Axioma</a>
+        <ul class="mn">
+            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
+            <li><a href="explorador/index.html" class="lk">Explorar</a></li>
+            <li><a href="panel_autor/index.html" class="lk">Mis Obras</a></li>
+        </ul>
+        <div class="act">
+            <div id="a1">
+                <a href="perfil/index.html" id="a2" class="usr"></a>
+                <button id="a3" class="btn btn-d">Salir</button>
+            </div>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="pf-head">
+            <div class="pf-avatar">✦</div>
+            <div class="pf-info">
+                <h2 id="a4"></h2>
+                <p class="pf-role">Autor</p>
+            </div>
+        </div>
+        <div class="pf-card">
+            <h3 class="pf-card-t">Ajustes de Perfil</h3>
+            <p class="pf-card-sub">Administra tu información personal.</p>
+            <div class="pf-grid">
+                <div class="pf-field">
+                    <label for="a5">Nombre</label>
+                    <input type="text" id="a5">
+                </div>
+                <div class="pf-field">
+                    <label for="a6">Correo electrónico</label>
+                    <input type="email" id="a6">
+                </div>
+                <div class="pf-field">
+                    <label for="a7">Contraseña</label>
+                    <input type="password" id="a7">
+                </div>
+            </div>
+            <div class="pf-field">
+                <label for="a8">Biografía</label>
+                <textarea id="a8" rows="4"></textarea>
+            </div>
+            <div class="pf-btns">
+                <button id="a9" class="btn btn-o">Descartar Cambios</button>
+                <button id="a10" class="btn btn-p">Guardar Cambios</button>
+            </div>
+        </div>
+    </main>
+    <div id="a11" class="toast-box"></div>
+    <script src="perfil/main.js"></script>
+</body>
+</html>

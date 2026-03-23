@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #FDFCF0;
+    color: #2D241E;
+    line-height: 1.6;
+}
+
+a {
+    color: #D35400;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.hid {
+    display: none !important;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2D241E;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.logo {
+    color: #FDFCF0;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.mn {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.lk {
+    color: #9E9082;
+    font-size: 14px;
+}
+
+.lk.on,
+.lk:hover {
+    color: #FFF;
+}
+
+.act {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.usr {
+    color: #FFF;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-p {
+    background: #D35400;
+    color: #FFF;
+}
+
+.btn-o {
+    border-color: #E8E0D0;
+    color: #2D241E;
+    background: none;
+}
+
+.btn-d {
+    color: #C0392B;
+    background: none;
+    border-color: transparent;
+}
+
+.nav .btn-o {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #FFF;
+}
+
+.btn-fw {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.rd-wrap {
+    display: flex;
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+}
+
+.rd-side {
+    width: 250px;
+    background: #FFF;
+    padding: 20px;
+    border-right: 1px solid #E8E0D0;
+    flex-shrink: 0;
+}
+
+.rd-title {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.rd-auth {
+    font-size: 13px;
+    color: #9E9082;
+}
+
+.rd-area {
+    flex: 1;
+    padding: 40px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
