@@ -4,9 +4,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "propuesta",
-      "Ejercicios_clase"
+      "**/node_modules/**"
     ]
   }
 }

@@ -1,130 +1,189 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen 1</title>
+<!DOCTYPE html>
+<html lang="es">
 
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador</title>
+
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-      body {
-        background-color: #e6d5c8;
-        font-family: Arial, sans-serif;
-        color: #333;
-        margin: 20%;
-      }
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #050505;
+            padding: 15px;
+        }
 
-      .main-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        h1 {
+            font-size: 26px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
 
-      .card {
-        background-color: white;
-        width: 350px;
-        padding: 80px 30px 30px 30px;
-        border-radius: 30px;
-        text-align: center;
-        position: relative;
-        margin-top: 50px;
-      }
+        h6 {
+            text-align: center;
+        }
 
-      .image-container img {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 20px;
-      }
+        .buscador {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
 
-      .Text1 {
-        color: orange;
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
+        .buscador input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #413636;
+            border-radius: 20px;
+            transition: border-color 0.1s;
+        }
 
-      .Text2 {
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
+        .buscador input:focus {
+            border-color: #0400ff;
+            background-color: #eefaff;
+            outline: none;
+        }
 
-      h1 {
-        font-size: 32px;
-        margin-bottom: 5px;
-      }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
 
-      .Icon i {
-        background-color: #e6e3e3;
-        color: #334155;
-        padding: 5px;
-        border-radius: 20%;
-        font-size: 18px;
-      }
+        .card {
+            background-color: white;
+            border: 0.5px solid;
+            border-color: #050505;
+            border-radius: 15px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
 
-      button {
-        background-color: orange;
-        color: white;
-        border: none;
-        width: 50%;
-        margin-top: 10px;
-        padding: 10px;
-        border-radius: 50px;
-        font-size: 20px;
-      }
+        .card:hover {
+            border-color: #0400ff;
+            background-color: #eefaff;
+        }
 
-      img {
-        width: 200px;
-        height: auto;
-        border-radius: 10px;
-      }
+        .card p {
+            font-size: 14px;
+            color: #424242;
+        }
 
-      .Icon i.fa-twitter {
-        background-color: aqua;
-        color: white;
-      }
+        .oculto {
+            display: none;
+        }
 
-      .Icon i.fa-linkedin {
-        color: blue;
-      }
-      
-      .Icon i.fa-envelope {
-        color: red;
-      }
+        .sin-result {
+            text-align: center;
+            font-size: 16px;
+            color: #525151;
+        }
 
+        @media (width <=750px) {
+            .cont {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 50%;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .buscador input {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (width >=751px) {
+            .card {
+                width: 220px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="main-container">
-      <div class="card">
-        <div class="image-container"><img src="./persona.jpg" alt="" /></div>
-        <h1>Sofia Martinez</h1>
-        <p class="Text1">Web Developer</p>
-        <p class="Text2">
-          Passionate web developer specializing <br />
-          in modern JavaScript frameworks
-        </p>
-        <div class="Icon">
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-solid fa-envelope"></i>
-        </div>
-        <button>Contact Me</button>
-      </div>
+</head>
+
+<body>
+
+    <h1>Buscador</h1>
+    <h6>Sebastian de Jesús Hernández Hernández</h6>
+
+    <div class="buscador">
+        <input type="text" id="cBusqueda" placeholder="Buscar..." oninput="buscar()">
     </div>
-  </body>
+
+    <div class="contenedor" id="contenedor">
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Lenguaje de programacion para la web</p>
+        </div>
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Estilos para paginas web</p>
+        </div>
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Lenguaje de marcado para estructura</p>
+        </div>
+        <div class="card">
+            <h3>React</h3>
+            <p>Libreria de JavaScript para interfaces</p>
+        </div>
+        <div class="card">
+            <h3>Angular</h3>
+            <p>Framework de desarrollo web</p>
+        </div>
+        <div class="card">
+            <h3>Node</h3>
+            <p>Entorno de ejecucion para JavaScript</p>
+        </div>
+        <div class="card">
+            <h3>Java</h3>
+            <p>Lenguaje orientado a objetos</p>
+        </div>
+    </div>
+
+    <p class="sin-result oculto" id="sinResult">No se encontraron resultados</p>
+
+    <script>
+        const cBusqueda = document.getElementById("cBusqueda");
+        const sinResult = document.getElementById("sinResult");
+        const cards = document.querySelectorAll(".card");
+
+        function buscar() {
+            const texto = cBusqueda.value.toLowerCase();
+            let aux = 0;
+            for (let i = 0; i < cards.length; i++) {
+                const nombre = cards[i].querySelector("h3").textContent.toLowerCase();
+                if (nombre.indexOf(texto) !== -1) {
+                    cards[i].classList.remove("oculto");
+                    aux++;
+                } else {
+                    cards[i].classList.add("oculto");
+                }
+            }
+
+            if (aux === 0) {
+                sinResult.classList.remove("oculto");
+            } else {
+                sinResult.classList.add("oculto");
+            }
+        }
+    </script>
+</body>
+
 </html>
