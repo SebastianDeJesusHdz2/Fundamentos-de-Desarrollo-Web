@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Mis Obras</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
+            </div>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
+            </div>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                <a href="mis_obras/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="panel-derecho">
+            
+            <!-- Cabecera -->
+            <header class="cabecera-mis-obras">
+                <div class="info-mo">
+                    <h1>Mis Obras</h1>
+                    <p>Gestiona tus manuscritos, investigaciones y el impacto de tu voz literaria.</p>
+                </div>
+                <a href="editor/index.html" class="btn-nuevo-mo"><span class="mo-plus">&#10133;</span> Nuevo Manuscrito</a>
+            </header>
+
+            <!-- Tabla de Obras -->
+            <section class="contenedor-lista-mo">
+                <div class="cabeceras-lista-mo">
+                    <div class="col-mo col-obra">OBRA</div>
+                    <div class="col-mo col-tipo">TIPO</div>
+                    <div class="col-mo col-estado">ESTADO</div>
+                    <div class="col-mo col-config">CONFIGURACIÓN</div>
+                    <div class="col-mo col-acc">ACCIÓN</div>
+                </div>
+
+                <!-- Fila 1: Sombras del Mañana -->
+                <div class="fila-mo">
+                    <div class="celda-mo col-obra">
+                        <div class="icono-obra verde-bg"><span class="io-txt">&#128214;</span></div>
+                        <div class="textos-obra-mo">
+                            <strong>Sombras del Mañana</strong>
+                            <span>45,230 palabras · Editado hace 2 días</span>
+                        </div>
+                    </div>
+                    <div class="celda-mo col-tipo">
+                        <span class="badge verde-badge">Novela</span>
+                    </div>
+                    <div class="celda-mo col-estado">
+                        <span class="status-dot dot-verde"></span>
+                        <span class="status-txt-v">Verificado</span>
+                    </div>
+                    <div class="celda-mo col-config">
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <div class="toggle-switch is-on"><div class="toggle-knob"></div></div>
+                                <span>Publicar</span>
+                            </div>
+                            <div class="toggle-item">
+                                <div class="toggle-switch"><div class="toggle-knob"></div></div>
+                                <span>Descargas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="celda-mo col-acc">
+                        <a href="editor/index.html" class="ed-icon">&#9998;</a>
+                    </div>
+                </div>
+
+                <!-- Fila 2: Ecosistemas en Riesgo -->
+                <div class="fila-mo">
+                    <div class="celda-mo col-obra">
+                        <div class="icono-obra rojo-bg"><span class="io-txt">&#9823;</span></div>
+                        <div class="textos-obra-mo">
+                            <strong>Ecosistemas en Riesgo</strong>
+                            <span>12,800 palabras · Editado hace 1 semana</span>
+                        </div>
+                    </div>
+                    <div class="celda-mo col-tipo">
+                        <span class="badge gris-badge">Investigación</span>
+                    </div>
+                    <div class="celda-mo col-estado">
+                        <span class="btn-solicitar">Solicitar Verificación</span>
+                    </div>
+                    <div class="celda-mo col-config">
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <div class="toggle-switch"><div class="toggle-knob"></div></div>
+                                <span>Publicar</span>
+                            </div>
+                            <div class="toggle-item">
+                                <div class="toggle-switch is-on"><div class="toggle-knob"></div></div>
+                                <span>Descargas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="celda-mo col-acc">
+                        <a href="editor/index.html" class="ed-icon">&#9998;</a>
+                    </div>
+                </div>
+
+                <!-- Fila 3: La Pluma de Oro -->
+                <div class="fila-mo">
+                    <div class="celda-mo col-obra">
+                        <div class="icono-obra gris-bg"><span class="io-txt">&#10002;</span></div>
+                        <div class="textos-obra-mo">
+                            <strong>La Pluma de Oro</strong>
+                            <span>8,150 palabras · Editado ayer</span>
+                        </div>
+                    </div>
+                    <div class="celda-mo col-tipo">
+                        <span class="badge verde-badge">Novela</span>
+                    </div>
+                    <div class="celda-mo col-estado">
+                        <span class="status-dot dot-gris"></span>
+                        <span class="status-txt-g">Pendiente</span>
+                    </div>
+                    <div class="celda-mo col-config">
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <div class="toggle-switch"><div class="toggle-knob"></div></div>
+                                <span>Publicar</span>
+                            </div>
+                            <div class="toggle-item">
+                                <div class="toggle-switch"><div class="toggle-knob"></div></div>
+                                <span>Descargas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="celda-mo col-acc">
+                        <a href="editor/index.html" class="ed-icon">&#9998;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RENDIMIENTO EDITORIAL -->
+            <section class="seccion-rendimiento">
+                <h2 class="titulo-seccion">Rendimiento Editorial</h2>
+                <div class="separador-titulo"></div>
+
+                <div class="grid-rendimiento">
+                    <!-- Gráfico de Producción Diaria -->
+                    <div class="card-produccion">
+                        <div class="prod-header">
+                            <div class="prod-icono">&#128202;</div>
+                            <div class="prod-textos">
+                                <strong>Producción Diaria</strong>
+                                <span>Conteo de palabras (últimos 7 días)</span>
+                            </div>
+                        </div>
+
+                        <div class="total-semanal">
+                            <strong class="total-num">12,402</strong>
+                            <span>Total Semanal</span>
+                        </div>
+
+                        <!-- Barras de Gráfico CSS -->
+                        <div class="chart-barras">
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 40%;"></div>
+                                <span class="dia-label">LUN</span>
+                            </div>
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 70%;"></div>
+                                <span class="dia-label">MAR</span>
+                            </div>
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 55%;"></div>
+                                <span class="dia-label">MIE</span>
+                            </div>
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 85%;"></div>
+                                <span class="dia-label">JUE</span>
+                            </div>
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 45%;"></div>
+                                <span class="dia-label">VIE</span>
+                            </div>
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 30%;"></div>
+                                <span class="dia-label">SAB</span>
+                            </div>
+                            <div class="barra-dia">
+                                <div class="barra-fill" style="height: 20%;"></div>
+                                <span class="dia-label">DOM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Tiempo de Enfoque -->
+                    <div class="card-enfoque">
+                        <div class="enfoque-header">
+                            <span class="enfoque-icono">&#128337;</span>
+                            <span class="badge-enfoque">MÉTRICA DE FOCO</span>
+                        </div>
+                        <span class="enfoque-label">TIEMPO DE ENFOQUE</span>
+                        <div class="enfoque-valor">
+                            <strong>42</strong> <span>min</span>
+                        </div>
+                        <p class="enfoque-desc">Promedio por sesión. Has aumentado un 12% tu concentración respecto a la semana pasada.</p>
+                        <div class="enfoque-meta">
+                            META DIARIA: 50 MIN
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HITOS Y LOGROS + IMPACTO POR GENERO -->
+            <div class="grid-hitos-impacto">
+
+                <!-- Hitos y Logros -->
+                <section class="card-hitos">
+                    <h2><span class="hitos-icono">&#127942;</span> Hitos y Logros</h2>
+
+                    <div class="hito-item">
+                        <div class="hito-info">
+                            <strong>Maestro de la Prosa</strong>
+                            <span class="hito-porcent">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <span class="hito-desc">Escribe 100,000 palabras totales</span>
+                    </div>
+
+                    <div class="hito-item">
+                        <div class="hito-info">
+                            <strong>Investigador Serial</strong>
+                            <span class="hito-porcent">3/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                        <span class="hito-desc">Publica 5 investigaciones verificadas</span>
+                    </div>
+
+                    <div class="hito-item">
+                        <div class="hito-info">
+                            <strong>Best-Seller del Santuario</strong>
+                            <span class="hito-locked">Locked</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill locked-fill" style="width: 5%;"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Impacto por Género -->
+                <section class="card-impacto">
+                    <h2><span class="impacto-icono">&#127760;</span> Impacto por Género</h2>
+
+                    <div class="genero-item">
+                        <span class="genero-label">Ficción</span>
+                        <div class="genero-barras">
+                            <div class="genero-barra-bg">
+                                <div class="genero-barra-fill alcance" style="width: 80%;"></div>
+                            </div>
+                            <span class="genero-valor">8.2k</span>
+                        </div>
+                        <div class="genero-barras">
+                            <div class="genero-barra-bg">
+                                <div class="genero-barra-fill interaccion" style="width: 65%;"></div>
+                            </div>
+                            <span class="genero-sub">Interacción</span>
+                        </div>
+                    </div>
+
+                    <div class="genero-item">
+                        <span class="genero-label">Ciencia</span>
+                        <div class="genero-barras">
+                            <div class="genero-barra-bg">
+                                <div class="genero-barra-fill alcance" style="width: 50%;"></div>
+                            </div>
+                            <span class="genero-valor">3.1k</span>
+                        </div>
+                        <div class="genero-barras">
+                            <div class="genero-barra-bg">
+                                <div class="genero-barra-fill interaccion" style="width: 70%;"></div>
+                            </div>
+                            <span class="genero-sub">Interacción</span>
+                        </div>
+                    </div>
+
+                    <div class="leyenda-impacto">
+                        <span class="ley-item"><span class="ley-dot alcance-dot"></span> ALCANCE GLOBAL</span>
+                        <span class="ley-item"><span class="ley-dot inter-dot"></span> INTERACCIÓN</span>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer-axioma">
+                <span>Axioma Sanctuary v2.4.0 — Todos los derechos reservados sobre la propiedad intelectual del autor.</span>
+            </footer>
+
+        </main>
+    </div>
+</body>
+</html>

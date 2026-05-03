@@ -2,48 +2,182 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editor - Axioma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Editor de Texto</title>
     <link rel="stylesheet" href="style.css">
     <base href="../">
 </head>
 <body>
-    <nav class="nav">
-        <a href="main/index.html" class="logo">Axioma</a>
-        <ul class="mn">
-            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
-            <li><a href="explorador/index.html" class="lk">Explorar</a></li>
-            <li><a href="panel_autor/index.html" class="lk on">Mis Obras</a></li>
-        </ul>
-        <div class="act">
-            <div id="a1">
-                <a href="perfil/index.html" id="a2" class="usr"></a>
-                <button id="a3" class="btn btn-d">Salir</button>
+    
+    <div class="pantalla-editor">
+        
+        <!-- BARRA IZQUIERDA: Minimalista (Solo Iconos) -->
+        <aside class="barra-iconos">
+            <div class="iconos-sup">
+                <a href="inicio/index.html" class="icono-nav c-principal" title="Inicio">&#127968;</a>
+                <!-- Link a borradores simulando carpeta/editor -->
+                <a href="mis_obras/index.html" class="icono-nav activo" title="Mis Obras">&#128214;</a>
+                <a href="explorador/index.html" class="icono-nav" title="Biblioteca">&#128218;</a>
+
             </div>
-        </div>
-    </nav>
-    <main class="ed-wrap">
-        <aside class="ed-side">
-            <button id="a4" class="btn btn-o btn-fw">Volver al Panel</button>
-            <h3 class="side-t">Metadatos</h3>
-            <label for="a5">Título</label>
-            <input type="text" id="a5">
-            <label for="a6">Clasificación</label>
-            <select id="a6">
-                <option value="libro">Libro</option>
-                <option value="investigacion">Investigación</option>
-            </select>
-            <label for="a7">Estado</label>
-            <select id="a7">
-                <option value="borrador">Borrador</option>
-                <option value="publicada">Publicada</option>
-            </select>
-            <button class="btn btn-p btn-fw" id="a8">Guardar Obra</button>
+            <div class="iconos-inf">
+                <a href="#" class="icono-nav" title="Buscar">&#128269;</a>
+                <a href="configuracion/index.html" class="icono-nav" title="Configuración">&#9881;</a>
+            </div>
         </aside>
-        <div class="ed-area">
-            <div class="ed-box" id="a9" contenteditable="true"></div>
-        </div>
-    </main>
-    <div id="a10" class="toast-box"></div>
-    <script src="editor/main.js"></script>
+
+        <!-- CONTENEDOR CENTRAL: Área de Escritura -->
+        <main class="zona-escritura">
+            
+            <header class="cabecera-editor">
+                <!-- Floating Left: Notificación -->
+                <div class="noti-guardado">
+                    <div class="circulo-check">&#10003;</div>
+                    <div class="textos-noti">
+                        <strong>Cambios guardados</strong>
+                        <span>Hace 2 minutos en la nube</span>
+                    </div>
+                </div>
+
+                <!-- Breadcrumbs Centro -->
+                <div class="miga-pan">
+                    MANUSCRITO <span class="sep">&#8250;</span> EL ECO DE LOS ABEDULES <span class="sep">&#8250;</span> <strong class="cap-act">CAPÍTULO IV</strong>
+                </div>
+
+                <!-- Acciones Derecha -->
+                <div class="acciones-editor">
+                    <button class="btn-select-tipo"><span class="ic-libro">&#128214;</span> Novela &#8964;</button>
+                    <button class="btn-guardar"><span class="ic-guardar">&#128190;</span> Guardar</button>
+                </div>
+            </header>
+
+            <!-- Hoja de Papel (Texto) -->
+            <article class="hoja-texto">
+                
+                <h1 class="titilo-capitulo">Capítulo IV: Las Sombras del Valle</h1>
+                
+                <div class="cuerpo-redaccion">
+                    <p>El sol se ponía tras las crestas dentadas de <span class="glo-link">Malvaluna</span>, tiñendo el cielo de un carmesí violento que parecía presagiar el cambio. No era solo el final del día; era el final de una era que <span class="glo-link">Elias Thorne</span> había intentado proteger con cada fibra de su ser.</p>
+                    
+                    <p>Sentado frente a la vieja mesa de caoba, Elias observaba los mapas desplegados. El <span class="glo-link">Códice de los Susurros</span> descansaba a su lado, sus páginas de vitela crujiendo con un magnetismo casi tangible. Había dedicado años a descifrar los símbolos, pero solo ahora, cuando el peligro era inminente, las piezas comenzaban a encajar de forma aterradora.</p>
+                    
+                    <p>"No es el conocimiento lo que nos salva," pensó, "sino lo que estamos dispuestos a hacer con él." La brisa de la noche trajo consigo el aroma a lluvia y pino, recordándole que los <span class="glo-link">Ancestros del Valle</span> no perdonarían el silencio.</p>
+                    
+                    <p>La puerta se abrió con un quejido suave. Era <span class="glo-link">Silvana</span>, portando una única vela que proyectaba sombras alargadas y danzarinas sobre las paredes llenas de libros. Su rostro, habitualmente sereno, mostraba ahora las marcas del cansancio y la determinación.</p>
+                    
+                    <blockquote>
+                        "Dicen que los bosques han dejado de cantar," murmuró ella, dejando la vela sobre la mesa. "Que el silencio se ha vuelto sólido."
+                    </blockquote>
+                    
+                    <p>Elias no respondió de inmediato. Sus dedos rozaron el relieve del Códice. Sabía que la respuesta no estaba en las palabras escritas, sino en los espacios vacíos entre ellas. Aquellos vacíos que pronto empezarían a llenarse de historia.</p>
+                </div>
+
+            </article>
+
+            <!-- Toolbar Flotante Inferior -->
+            <div class="toolbar-flotante">
+                <div class="herramientas-texto">
+                    <button class="tb-btn fw-bold">B</button>
+                    <button class="tb-btn f-italic">I</button>
+                    <button class="tb-btn"><span class="t-ic">&#8803;</span></button>
+                    <div class="divisoria-v"></div>
+                    <button class="tb-btn"><span class="t-ic">&#10133;</span></button>
+                    <button class="tb-btn"><span class="t-ic">&#9998;</span></button>
+                </div>
+                <div class="divisoria-v-larga"></div>
+                <div class="metricas-toolbar">
+                    <div class="metrica"><strong>1,240</strong> <span>PALABRAS</span></div>
+                    <div class="metrica"><strong>12 MIN</strong> <span>LECTURA</span></div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- PANEL DERECHO: Glosario y Estadísticas Sesión -->
+        <aside class="barra-glosario">
+            
+            <div class="cabecera-glo">
+                <a href="glosario/index.html" style="text-decoration:none; color:inherit;" title="Gestionar Glosario"><h2>Glosario Activo <span style="font-size:12px; margin-left:5px; opacity:0.5;">&#8599;</span></h2></a>
+                <button class="btn-cerrar-glo">&#10005;</button>
+            </div>
+
+            <div class="tabs-glo">
+                <button class="tab-btn activo">Todos</button>
+                <button class="tab-btn">Personajes</button>
+                <button class="tab-btn">Lugares</button>
+            </div>
+
+            <div class="lista-entradas">
+                
+                <!-- Entrada de Personaje -->
+                <div class="entrada-glo">
+                    <div class="meta-entrada">
+                        <span class="tipo-personaje">PERSONAJE</span>
+                        <span class="ic-link">&#8599;</span>
+                    </div>
+                    <h3>Elias Thorne</h3>
+                    <p>Último guardián de la biblioteca sumergida. Posee la habilidad de "Escucha Temporal".</p>
+                </div>
+
+                <!-- Entrada de Lugar (Destacado) -->
+                <div class="entrada-glo entrada-destacada">
+                    <div class="meta-entrada meta-verde">
+                        <span class="tipo-lugar">LUGAR</span>
+                        <span class="ic-star">&#9733;</span>
+                    </div>
+                    <h3>Malvaluna</h3>
+                    <p>Cordillera volcánica inactiva que rodea el Valle de los Susurros. Sus rocas contienen cuarzo violeta.</p>
+                    <div class="img-glo-mock">
+                        <div class="montanas-css"></div>
+                    </div>
+                </div>
+
+                <!-- Entrada de Concepto -->
+                <div class="entrada-glo">
+                    <div class="meta-entrada">
+                        <span class="tipo-concepto">CONCEPTO</span>
+                        <span class="ic-link">&#9903;</span>
+                    </div>
+                    <h3>Códice de los Susurros</h3>
+                    <p>Libro prohibido escrito en "Eco-Simbología". Reacciona a la presencia de linajes antiguos.</p>
+                </div>
+
+                <!-- Entrada de Personaje -->
+                <div class="entrada-glo">
+                    <div class="meta-entrada">
+                        <span class="tipo-personaje">PERSONAJE</span>
+                        <span class="ic-link">&#8599;</span>
+                    </div>
+                    <h3>Silvana</h3>
+                    <p>Hermana de Elias. Susurra a los elementos. Mantiene una agenda oculta con los Ancestros.</p>
+                </div>
+
+            </div>
+
+            <!-- Panel Flotante Inferior Glosario -->
+            <div class="sesion-escritura">
+                <div class="header-sesion">
+                    <span class="ic-rayo">&#9889;</span>
+                    <h4>Sesión de Escritura</h4>
+                </div>
+                
+                <div class="metricas-sesion">
+                    <div class="m-box">
+                        <span class="m-label">TIEMPO</span>
+                        <strong class="m-val">42:15</strong>
+                    </div>
+                    <div class="m-box">
+                        <span class="m-label">PROGRESO</span>
+                        <strong class="m-val">85%</strong>
+                    </div>
+                </div>
+
+                <a href="mis_obras/index.html" class="btn-exportar">EXPORTAR BORRADOR</a>
+            </div>
+
+        </aside>
+
+    </div>
+
 </body>
 </html>

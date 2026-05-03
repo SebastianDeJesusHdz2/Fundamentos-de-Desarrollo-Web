@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Configuración</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar Exactamente igual a Inicio / Explorador / Sobre Nosotros -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
+            </div>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
+            </div>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                                <a href="mis_obras/index.html" class="item-menu">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario activo-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="panel-derecho">
+            
+            <header class="encabezado-conf">
+                <h1>Configuración</h1>
+                <p>Ajusta tu santuario editorial. Define cómo quieres que el mundo perciba tus palabras y cómo tú percibes tu propio espacio de creación.</p>
+            </header>
+
+            <div class="layout-conf">
+                
+                <!-- Sub-sidebar Menu Settings -->
+                <nav class="nav-secciones">
+                    <span class="titulo-sec">SECCIONES</span>
+                    
+                    <a href="configuracion/index.html#perfil" class="link-sec activo-punto">Gestión de Perfil</a>
+                    <a href="configuracion/index.html#interfaz" class="link-sec">Preferencias de Interfaz</a>
+                    <a href="configuracion/index.html#notificaciones" class="link-sec">Notificaciones</a>
+                    <a href="configuracion/index.html#peligro" class="link-sec peligro-link">Zona de Peligro</a>
+
+                    <div class="tarjeta-perfil-lateral">
+                        <div class="header-perfil">
+                            <div class="avatar-caja bg-negro">
+                                <span class="icono-cara">&#128104;</span>
+                            </div>
+                            <span class="tag-pro bg-verde-claro">PRO</span>
+                        </div>
+                        <div class="info-perfil-lateral">
+                            <strong>Elena Mistral</strong>
+                            <span>elena.m@axioma.io</span>
+                        </div>
+                        <a href="#" class="btn-enlace" style="pointer-events: none;">Cambiar avatar &nearr;</a>
+                    </div>
+                </nav>
+
+                <!-- Configuration Forms -->
+                <div class="contenido-conf">
+                    
+                    <!-- Gestión de Perfil -->
+                    <section id="perfil" class="modulo-conf">
+                        <h2><span class="icono-modulo">&#128100;</span> Gestión de Perfil</h2>
+                        
+                        <div class="fila-inputs">
+                            <div class="grupo-input">
+                                <label>NOMBRE PÚBLICO</label>
+                                <input type="text" value="Elena Mistral">
+                            </div>
+                            <div class="grupo-input">
+                                <label>CORREO ELECTRÓNICO</label>
+                                <input type="email" value="elena.m@axioma.io">
+                            </div>
+                        </div>
+
+                        <div class="seccion-interna">
+                            <span class="subtitulo-int">Cambio de Contraseña</span>
+                            <div class="fila-inputs mt-op">
+                                <div class="grupo-input">
+                                    <input type="password" placeholder="Contraseña actual">
+                                </div>
+                                <div class="grupo-input">
+                                    <input type="password" placeholder="Nueva contraseña">
+                                </div>
+                            </div>
+                            <button type="button" class="btn-gris mt-btn">Actualizar Contraseña</button>
+                        </div>
+                    </section>
+
+                    <!-- Preferencias de Interfaz -->
+                    <section id="interfaz" class="modulo-conf mb-extra">
+                        <h2><span class="icono-modulo">&#127912;</span> Preferencias de Interfaz</h2>
+                        
+                        <div class="fila-inputs">
+                            <div class="grupo-opciones">
+                                <label>ESQUEMA DE COLOR</label>
+                                <div class="cajas-color">
+                                    <label class="caja-radio">
+                                        <input type="radio" name="tema" checked>
+                                        <div class="visual-tema bg-claro">
+                                            <div class="linea-mock"></div>
+                                        </div>
+                                        <span class="txt-tema">Digital Vellum<br><small>(Claro)</small></span>
+                                    </label>
+                                    <label class="caja-radio">
+                                        <input type="radio" name="tema">
+                                        <div class="visual-tema bg-oscuro">
+                                            <div class="linea-mock dark-line"></div>
+                                        </div>
+                                        <span class="txt-tema">Midnight Ink<br><small>(Oscuro)</small></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="grupo-opciones pl-gap">
+                                <label>TIPOGRAFÍA DE LECTURA</label>
+                                <div class="lista-typo">
+                                    <label class="radio-typo">
+                                        <span class="nombre-typo font-sans">Inter (Sans)</span>
+                                        <input type="radio" name="typo" checked>
+                                    </label>
+                                    <label class="radio-typo">
+                                        <span class="nombre-typo font-geo">Manrope (Geométrica)</span>
+                                        <input type="radio" name="typo">
+                                    </label>
+                                    <label class="radio-typo">
+                                        <span class="nombre-typo font-serif">Lora (Serif)</span>
+                                        <input type="radio" name="typo">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Action Bar (Floating for profile section) -->
+                    <div class="barra-flotante">
+                        <span>Tienes cambios sin guardar en tu perfil.</span>
+                        <div class="botones-barra">
+                            <button class="btn-fantasma">Descartar</button>
+                            <button class="btn-verde">Guardar Cambios</button>
+                        </div>
+                    </div>
+
+                    <!-- Notificaciones -->
+                    <section id="notificaciones" class="modulo-conf extra-margin">
+                        <h2><span class="icono-modulo">&#128276;</span> Notificaciones</h2>
+                        
+                        <div class="contenedor-toggles">
+                            <div class="fila-toggle">
+                                <div class="textos-toggle">
+                                    <strong>Resumen Semanal</strong>
+                                    <span>Recibe estadísticas de lectura cada lunes.</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="fila-toggle borde-sup">
+                                <div class="textos-toggle">
+                                    <strong>Nuevos Comentarios</strong>
+                                    <span>Avisar cuando alguien interactúe con tus historias.</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="fila-toggle borde-sup">
+                                <div class="textos-toggle">
+                                    <strong>Alertas de Inicio de Sesión</strong>
+                                    <span>Seguridad mejorada para tu cuenta.</span>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Zona de Peligro -->
+                    <section id="peligro" class="modulo-conf">
+                        <div class="caja-peligro">
+                            <h2 class="texto-rojo"><span class="icono-modulo">&#9888;</span> Zona de Peligro</h2>
+                            <p class="texto-rojo-claro">
+                                Al eliminar tu cuenta, todos tus borradores, historias publicadas y estadísticas se borrarán permanentemente.
+                                Esta acción es irreversible y no podrá ser deshecha por nuestro equipo de soporte.
+                            </p>
+                            <div class="fila-peligro">
+                                <button type="button" class="btn-rojo">Eliminar mi cuenta definitivamente</button>
+                                <span class="id-usuario">ID DE USUARIO: AX-992-MIST</span>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            
+        </main>
+    </div>
+</body>
+</html>

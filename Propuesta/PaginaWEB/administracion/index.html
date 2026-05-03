@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Administración Central</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
+            </div>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>PANEL EDITORIAL</span>
+            </div>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                <a href="mis_obras/index.html" class="item-menu">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                <a href="administracion/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+
+                <!-- Perfil del Editor -->
+                <div class="perfil-editor">
+                    <div class="avatar-editor">JC</div>
+                    <div class="info-editor">
+                        <strong>Julian Casablancas</strong>
+                        <span>Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="panel-derecho">
+            
+            <!-- Top Bar -->
+            <div class="topbar-admin">
+                <h2 class="titulo-topbar">Administración Central</h2>
+                <div class="topbar-acciones">
+                    <div class="buscador-top">
+                        <span class="lupa-ic">&#128269;</span>
+                        <input type="text" placeholder="Buscar expedientes...">
+                    </div>
+                    <span class="campana-ic">&#128276;</span>
+                </div>
+            </div>
+
+            <!-- Resumen Ejecutivo -->
+            <section class="resumen-ejecutivo">
+                <h2>Resumen Ejecutivo</h2>
+                <p>Estado global de la plataforma hoy, 24 de Octubre.</p>
+
+                <div class="grid-resumen">
+                    <!-- KPI 1: Crecimiento de Red -->
+                    <div class="kpi-card kpi-verde">
+                        <span class="kpi-label-w">CRECIMIENTO DE RED</span>
+                        <strong class="kpi-valor-w">1,248</strong>
+                        <span class="kpi-sub-w">Autores activos este mes</span>
+                        <div class="kpi-footer-w">
+                            <span class="kpi-trend">&#8599; +12% vs mes anterior</span>
+                        </div>
+                    </div>
+
+                    <!-- KPI 2: Nuevas Obras -->
+                    <div class="kpi-card kpi-blanco">
+                        <span class="kpi-label-g">Nuevas Obras</span>
+                        <strong class="kpi-valor-b">84</strong>
+                        <div class="kpi-footer-g">
+                            <span class="pill-pendientes">24 Pendientes</span>
+                            <span class="kpi-icon-footer">&#128202;</span>
+                        </div>
+                    </div>
+
+                    <!-- KPI 3: Estado del Sistema -->
+                    <div class="kpi-card kpi-blanco">
+                        <span class="kpi-label-g">Estado del Sistema</span>
+                        <strong class="kpi-valor-b">Óptimo</strong>
+                        <div class="kpi-footer-g">
+                            <span class="kpi-latencia">Latencia 42ms</span>
+                            <span class="kpi-icon-footer">&#9881;</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dos Columnas: Verificación + Nuevos Usuarios -->
+            <div class="dos-columnas-admin">
+
+                <!-- Columna Izquierda: Verificación de Manuscritos -->
+                <section class="col-verif">
+                    <div class="col-header">
+                        <h2>Verificación de Manuscritos</h2>
+                        <a href="#" class="link-historial" style="pointer-events:none;">Ver todo el historial &#8594;</a>
+                    </div>
+
+                    <!-- Cabeceras de la tabla -->
+                    <div class="tabla-verif-cab">
+                        <span class="tv-col tv-obra">OBRA / AUTOR</span>
+                        <span class="tv-col tv-genero">GÉNERO</span>
+                        <span class="tv-col tv-fecha">FECHA ENVÍO</span>
+                        <span class="tv-col tv-acciones">ACCIONES</span>
+                    </div>
+
+                    <!-- Fila 1 -->
+                    <div class="tabla-verif-fila">
+                        <div class="tv-col tv-obra">
+                            <div class="icono-libro bg-verde-libro"><span>&#128214;</span></div>
+                            <div class="info-obra-verif">
+                                <strong>El Eco de los Abismos</strong>
+                                <span>Elena G. Márquez</span>
+                            </div>
+                        </div>
+                        <div class="tv-col tv-genero">Ficción Especulativa</div>
+                        <div class="tv-col tv-fecha">Hoy, 10:45 AM</div>
+                        <div class="tv-col tv-acciones">
+                            <span class="acc-aprobar">&#10004;</span>
+                            <span class="acc-rechazar">&#10008;</span>
+                            <span class="acc-ver">&#128065;</span>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="tabla-verif-fila">
+                        <div class="tv-col tv-obra">
+                            <div class="icono-libro bg-gris-libro"><span>&#9823;</span></div>
+                            <div class="info-obra-verif">
+                                <strong>Crónicas de Neón</strong>
+                                <span>Marco Aurelio Soto</span>
+                            </div>
+                        </div>
+                        <div class="tv-col tv-genero">Cyberpunk / Ensayo</div>
+                        <div class="tv-col tv-fecha">Ayer, 06:12 PM</div>
+                        <div class="tv-col tv-acciones">
+                            <span class="acc-aprobar">&#10004;</span>
+                            <span class="acc-rechazar">&#10008;</span>
+                            <span class="acc-ver">&#128065;</span>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="tabla-verif-fila">
+                        <div class="tv-col tv-obra">
+                            <div class="icono-libro bg-gris-libro"><span>&#10002;</span></div>
+                            <div class="info-obra-verif">
+                                <strong>La Llave del Olvido</strong>
+                                <span>Isabel Allende II</span>
+                            </div>
+                        </div>
+                        <div class="tv-col tv-genero">Realismo Mágico</div>
+                        <div class="tv-col tv-fecha">22 Oct, 09:20 AM</div>
+                        <div class="tv-col tv-acciones">
+                            <span class="acc-aprobar">&#10004;</span>
+                            <span class="acc-rechazar">&#10008;</span>
+                            <span class="acc-ver">&#128065;</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Columna Derecha: Nuevos Usuarios -->
+                <section class="col-usuarios">
+                    <h2>Nuevos Usuarios</h2>
+
+                    <div class="usuario-item">
+                        <div class="avatar-usr bg-verde-usr">DS</div>
+                        <div class="info-usr">
+                            <strong>David G. Smith</strong>
+                            <span>AUTOR / PREMIUM</span>
+                        </div>
+                        <span class="dot-online"></span>
+                    </div>
+
+                    <div class="usuario-item">
+                        <div class="avatar-usr bg-rojo-usr">LR</div>
+                        <div class="info-usr">
+                            <strong>Lucía Rivera</strong>
+                            <span>LECTOR CRÍTICO</span>
+                        </div>
+                        <span class="dot-online"></span>
+                    </div>
+
+                    <div class="usuario-item">
+                        <div class="avatar-usr bg-azul-usr">SV</div>
+                        <div class="info-usr">
+                            <strong>Samuel K. Vance</strong>
+                            <span>AUTOR / BÁSICO</span>
+                        </div>
+                        <span class="dot-online"></span>
+                    </div>
+
+                    <div class="usuario-item">
+                        <div class="avatar-usr bg-morado-usr">BS</div>
+                        <div class="info-usr">
+                            <strong>Beatriz Soler</strong>
+                            <span>EN REVISIÓN</span>
+                        </div>
+                        <span class="dot-revision"></span>
+                    </div>
+
+                    <a href="#" class="link-gestionar" style="pointer-events:none;">Gestionar Todos los Usuarios</a>
+
+                    <!-- Consejo Editorial -->
+                    <div class="consejo-editorial">
+                        <h3>Consejo Editorial</h3>
+                        <p>Has revisado el 65% de la cola de hoy. Un último esfuerzo para mantener el SLA de 24 horas.</p>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

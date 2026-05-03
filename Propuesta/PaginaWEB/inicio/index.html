@@ -2,37 +2,253 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio - Axioma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Escritorio</title>
     <link rel="stylesheet" href="style.css">
     <base href="../">
 </head>
 <body>
-    <nav class="nav">
-        <a href="main/index.html" class="logo">Axioma</a>
-        <ul class="mn">
-            <li><a href="inicio/index.html" class="lk on">Inicio</a></li>
-            <li><a href="explorador/index.html" class="lk">Explorar</a></li>
-            <li class="auth hid"><a href="panel_autor/index.html" class="lk">Mis Obras</a></li>
-        </ul>
-        <div class="act">
-            <div id="a1">
-                <a href="login/index.html" class="btn btn-o">Entrar</a>
-                <a href="registro/index.html" class="btn btn-p">Registro</a>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
             </div>
-            <div id="a2" class="hid">
-                <a href="perfil/index.html" id="a3" class="usr"></a>
-                <button id="a4" class="btn btn-d">Salir</button>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
             </div>
-        </div>
-    </nav>
-    <main class="main">
-        <div id="a5" class="pop"></div>
-        <section class="list-sec">
-            <h2 class="list-t">Últimas Publicaciones</h2>
-            <div id="a6" class="list"></div>
-        </section>
-    </main>
-    <div id="a7" class="toast-box"></div>
-    <script src="inicio/main.js"></script>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                                <a href="mis_obras/index.html" class="item-menu">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="panel-derecho">
+            <header class="encabezado-escritorio">
+                <h1>Escritorio Personal</h1>
+                <p>Bienvenido de nuevo a tu refugio editorial. Aquí puedes gestionar tus manuscritos, seguir tus investigaciones y monitorear el pulso de tus obras publicadas.</p>
+            </header>
+
+            <!-- Top Cards -->
+            <div class="grupo-tarjetas-top">
+                <div class="tarjeta-metrica">
+                    <div class="caja-marca-agua">&#9997;</div>
+                    <span class="etiqueta-verde">MÉTRICA DESTACADA</span>
+                    <h2 class="numero-grande">12,450 Palabras</h2>
+                    <p class="texto-metrica">Progresión semanal en "El Alquimista de Sombras". Vas un 15% por delante de tu meta.</p>
+                    <a href="#" class="link-continuar" style="pointer-events: none;">Continuar Escribiendo &rarr;</a>
+                </div>
+                
+                <div class="tarjeta-status">
+                    <div class="icono-circulo">&#10004;</div>
+                    <h3>Status de Autor</h3>
+                    <p class="nivel-autor">Verificado Nivel Oro</p>
+                    
+                    <div class="contenedor-barra">
+                        <div class="barra-fondo">
+                            <div class="barra-progreso" style="width: 80%;"></div>
+                        </div>
+                        <span class="texto-hito">Próximo hito: 50k lecturas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investigaciones -->
+            <section class="seccion-dashboard">
+                <div class="encabezado-seccion">
+                    <div>
+                        <h2>Investigaciones Recientes</h2>
+                        <p>Documentación técnica y archivos de apoyo para tus obras.</p>
+                    </div>
+                    <a href="#" class="link-todo" style="pointer-events: none;">Ver todo</a>
+                </div>
+
+                <div class="rejilla-tres">
+                    <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                    <div class="tarjeta-inv">
+                        <div class="portada-inv bg-libros">
+                            <span class="tag-inv">INVESTIGACIÓN</span>
+                            <span class="tag-check">&#10004;</span>
+                        </div>
+                        <div class="cuerpo-inv">
+                            <div class="titulo-row-inv">
+                                <h4>Simbolismo Medieval en Europa</h4>
+                                <span class="icono-descarga">&#8681;</span>
+                            </div>
+                            <div class="estrellas">
+                                <span class="num-estrellas">4.8</span> &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </div>
+                            <div class="fila-progreso">
+                                <span class="txt-progreso">PROGRESO</span>
+                                <span class="tag-porcentaje">85%</span>
+                            </div>
+                            <div class="barra-mini-fondo">
+                                <div class="barra-mini-llenado bg-verde" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+
+                    <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                    <div class="tarjeta-inv">
+                        <div class="portada-inv bg-ciencia">
+                            <span class="tag-inv">INVESTIGACIÓN</span>
+                            <span class="tag-puntos">&#8230;</span>
+                        </div>
+                        <div class="cuerpo-inv">
+                            <div class="titulo-row-inv">
+                                <h4>Botánica de Ficción</h4>
+                                <span class="icono-descarga">&#8681;</span>
+                            </div>
+                            <div class="estrellas">
+                                <span class="num-estrellas">4.2</span> &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </div>
+                            <div class="fila-progreso">
+                                <span class="txt-progreso">PROGRESO</span>
+                                <span class="tag-porcentaje">32%</span>
+                            </div>
+                            <div class="barra-mini-fondo">
+                                <div class="barra-mini-llenado bg-verde" style="width: 32%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+
+                    <div class="tarjeta-inv-vacia">
+                        <div class="icono-mas-grande">&#10133;</div>
+                        <p>Nueva Investigación</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Novelas -->
+            <section class="seccion-dashboard">
+                <div class="encabezado-seccion">
+                    <div>
+                        <h2>Novelas Populares</h2>
+                        <p>Tus obras con mayor tracción en la comunidad.</p>
+                    </div>
+                    <a href="#" class="link-todo" style="pointer-events: none;">Explorar ranking</a>
+                </div>
+
+                <div class="rejilla-dos">
+                    <!-- Novela 1 -->
+                    <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                    <div class="tarjeta-libro">
+                        <div class="portada-libro bg-portada1">
+                            <h3>NE LI ME JEE WORK</h3>
+                            <p>SAFE & WORK</p>
+                        </div>
+                        <div class="datos-libro">
+                            <div class="tags-libro">
+                                <span class="tag-novela">NOVELA</span>
+                                <div class="iconos-libro">
+                                    <span class="icono-check-bg">&#10004;</span>
+                                    <span class="icono-descarga-gris">&#8681;</span>
+                                </div>
+                            </div>
+                            <h4>El Alquimista de Sombras</h4>
+                            <p class="desc-libro">En un mundo donde la luz es una moneda de cambio, un...</p>
+                            
+                            <div class="stats-libro">
+                                <div class="rating-libro">
+                                    <span class="estrellas-amarillas">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="resenas">(452 reseñas)</span>
+                                </div>
+                                <div class="estado-libro">
+                                    <span class="txt-escr">ESCRITURA</span>
+                                    <span class="valor-escr">72%</span>
+                                </div>
+                            </div>
+                            <div class="barra-mini-fondo m-top-mini">
+                                <div class="barra-mini-llenado bg-verde" style="width: 72%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+
+                    <!-- Novela 2 -->
+                    <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                    <div class="tarjeta-libro">
+                        <div class="portada-libro bg-portada2">
+                            <h3>WORK<br>WORK</h3>
+                            <span class="texto-rojo-lateral">NOVEL</span>
+                        </div>
+                        <div class="datos-libro">
+                            <div class="tags-libro">
+                                <span class="tag-novela">NOVELA</span>
+                                <div class="iconos-libro">
+                                    <span class="icono-check-bg">&#10004;</span>
+                                    <span class="icono-descarga-gris">&#8681;</span>
+                                </div>
+                            </div>
+                            <h4>Crónicas del Vacío</h4>
+                            <p class="desc-libro">La última frontera no es el espacio, sino la memoria. U...</p>
+                            
+                            <div class="stats-libro">
+                                <div class="rating-libro">
+                                    <span class="estrellas-amarillas">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    <span class="resenas">(318 reseñas)</span>
+                                </div>
+                                <div class="estado-libro">
+                                    <span class="txt-escr">LECTURA</span>
+                                    <span class="valor-escr">95%</span>
+                                </div>
+                            </div>
+                            <div class="barra-mini-fondo m-top-mini">
+                                <div class="barra-mini-llenado bg-verde" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Nueva Obra</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    
+    <div class="pantalla-nueva-obra">
+        <!-- Contenedor Principal Centrado -->
+        <main class="contenedor-formulario">
+            
+            <header class="cabecera-nueva">
+                <div class="titulos-nueva">
+                    <span class="etiqueta-sup">ESCRITORIO DEL AUTOR</span>
+                    <h1>Nueva Obra</h1>
+                </div>
+                <a href="mis_obras/index.html" class="btn-cerrar">&#10005;</a>
+            </header>
+
+            <div class="rejilla-form">
+                
+                <!-- Columna Izquierda: Datos del Manuscrito -->
+                <div class="col-datos">
+                    
+                    <!-- Titulo de Obra -->
+                    <div class="grupo-form">
+                        <label>Título del Manuscrito</label>
+                        <input type="text" class="input-gigante" placeholder="Escribe el nombre de tu próxima obra...">
+                    </div>
+
+                    <!-- Tipo de Obra -->
+                    <div class="grupo-form mt-40">
+                        <label>Tipo de Obra</label>
+                        <div class="opciones-tipo">
+                            <!-- Opcion 1 (Seleccionada por defecto via CSS simulación) -->
+                            <label class="tarjeta-tipo activa">
+                                <input type="radio" name="tipo_obra" checked class="rd-oculto">
+                                <div class="contenido-tipo">
+                                    <h3 class="tipo-tit"><span class="icono">&#128214;</span> Novela</h3>
+                                    <p>Ideal para ficción, narrativa extensa y desarrollo de tramas complejas.</p>
+                                </div>
+                            </label>
+                            
+                            <!-- Opcion 2 -->
+                            <label class="tarjeta-tipo">
+                                <input type="radio" name="tipo_obra" class="rd-oculto">
+                                <div class="contenido-tipo">
+                                    <h3 class="tipo-tit"><span class="icono">&#128196;</span> Investigación</h3>
+                                    <p>Estructurado para ensayos, tesis, y documentación con rigor académico.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Sinopsis -->
+                    <div class="grupo-form mt-40">
+                        <label>Sinopsis</label>
+                        <textarea class="textarea-sinopsis" placeholder="Resume el corazón de tu historia aquí..."></textarea>
+                    </div>
+
+                    <!-- Glosario Inicial -->
+                    <div class="grupo-form mt-40 mb-none">
+                        <div class="cabecera-glosario">
+                            <div class="textos-glosario">
+                                <h3>Configuración de Glosario Inicial</h3>
+                                <p>Define términos clave que aparecerán en tu panel lateral.</p>
+                            </div>
+                            <button class="btn-nuevo-term"><span class="icono-mas">&#10133;</span> Nuevo Término</button>
+                        </div>
+
+                        <div class="rejilla-cards-glo">
+                            <div class="card-glo">
+                                <div class="icono-glo c-verde">&#128100;</div>
+                                <div class="textos-glo">
+                                    <strong>Personajes</strong>
+                                    <span>5 entradas sugeridas</span>
+                                </div>
+                            </div>
+                            <div class="card-glo">
+                                <div class="icono-glo c-gris">&#127963;</div>
+                                <div class="textos-glo">
+                                    <strong>Locaciones</strong>
+                                    <span>3 escenarios clave</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Float decorativo del diseño -->
+                        <div class="float-creativo">
+                            <span class="punto-v"></span> MODO CREATIVO <div class="iconos-float"><span class="ic-q">?</span><span class="ic-g">&#9881;</span></div>
+                        </div>
+
+                    </div>
+
+                </div> <!-- Fin col izq -->
+
+                <!-- Columna Derecha: Portada e Iniciar -->
+                <div class="col-acciones">
+                    
+                    <div class="grupo-form">
+                        <label>Cargar Portada</label>
+                        <div class="caja-dropzone">
+                            
+                            <div class="portada-fantasma">
+                                <div class="hojas-fondo"></div>
+                                <div class="contenido-subida">
+                                    <div class="icono-imagen">&#128444;</div>
+                                    <strong>Subir Imagen</strong>
+                                    <span>PNG, JPG hasta 10MB<br>Recomendado: 1200 x 1600px</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Envio Final -->
+                    <div class="tarjeta-flotante-accion">
+                        <p class="cita-accion">"Un viaje de mil leguas comienza con un solo paso... o con el primer capítulo."</p>
+                        
+                        <!-- Link dirigido al editor que crearemos el usuario y yo en el futuro -->
+                        <a href="editor/index.html" class="btn-empezar">
+                            Empezar a Escribir <span class="pluma">&#9998;</span>
+                        </a>
+                        
+                        <a href="mis_obras/index.html" class="btn-cancelar">Cancelar</a>
+
+                        <div class="autoguardado-info">
+                            <span class="escudo">&#128304;</span> AUTOGUARDADO ACTIVADO
+                        </div>
+                    </div>
+
+                </div> <!-- Fin col der -->
+
+            </div>
+
+            <div class="divisor-final">
+                <div class="linea"></div>
+                <div class="icono-pluma-div">&#10002;</div>
+                <div class="linea"></div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

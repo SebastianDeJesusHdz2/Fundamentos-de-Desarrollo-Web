@@ -2,36 +2,254 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lectura - Axioma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Detalle de Obra</title>
     <link rel="stylesheet" href="style.css">
     <base href="../">
 </head>
 <body>
-    <nav class="nav">
-        <a href="main/index.html" class="logo">Axioma</a>
-        <ul class="mn">
-            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
-            <li><a href="explorador/index.html" class="lk on">Explorar</a></li>
-        </ul>
-        <div class="act">
-            <div id="a1">
-                <a href="login/index.html" class="btn btn-o">Entrar</a>
-                <a href="registro/index.html" class="btn btn-p">Registro</a>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar Exactamente igual al resto -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
             </div>
-            <div id="a2" class="hid">
-                <a href="perfil/index.html" id="a3" class="usr"></a>
-                <button id="a4" class="btn btn-d">Salir</button>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
             </div>
-        </div>
-    </nav>
-    <main class="rd-wrap">
-        <aside class="rd-side">
-            <button id="a5" class="btn btn-o btn-fw">Atrás a Explorar</button>
-            <h3 id="a6" class="rd-title"></h3>
-            <p id="a7" class="rd-auth"></p>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                                <a href="mis_obras/index.html" class="item-menu">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
         </aside>
-        <article class="rd-area" id="a8"></article>
-    </main>
-    <script src="lectura/main.js"></script>
+
+        <!-- Main Content (Lectura) -->
+        <main class="panel-derecho pd-lectura">
+            
+            <!-- Cabecera Navegación -->
+            <header class="cabecera-volver">
+                <a href="explorador/index.html" class="link-volver">
+                    <span class="flecha">&#8592;</span> Volver a la Biblioteca
+                </a>
+                <div class="badge-verificada">
+                    <span class="escudo">&#10004;</span> Investigación Verificada
+                </div>
+            </header>
+
+            <!-- Bloque Hero: Datos de Obra -->
+            <section class="grid-obra">
+                
+                <!-- Columna 1: Portada y Acciones -->
+                <div class="col-portada-datos">
+                    <div class="mock-portada-edificio">
+                        <div class="estructura-edif">
+                            <div class="pilar"></div>
+                            <div class="pilar"></div>
+                            <div class="pilar"></div>
+                        </div>
+                        <div class="mar-css"></div>
+                    </div>
+
+                    <div class="botones-obra">
+                        <a href="leyendo/index.html" class="btn-leer">
+                            <span class="ic">&#128214;</span> Empezar a Leer
+                        </a>
+                        <button class="btn-pdf">
+                            <span class="ic">&#10515;</span> Descargar PDF
+                        </button>
+                    </div>
+
+                    <div class="caja-puntuacion">
+                        <span class="sobre-punt">PUNTUACIÓN GLOBAL</span>
+                        <div class="cuerpo-punt">
+                            <div class="punt-num">
+                                <strong>4.8</strong><span>/5</span>
+                            </div>
+                            <div class="punt-estrellas">
+                                <span class="estrellas">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                                <span class="resenas">1,240 reseñas</span>
+                            </div>
+                        </div>
+                        <button class="btn-puntuar">Puntuar esta obra</button>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Info Textual y Metadatos -->
+                <div class="col-info-datos">
+                    
+                    <h1 class="titulo-obra">El Ecosistema del Silencio: Análisis de la Prosa Moderna</h1>
+                    
+                    <div class="meta-autor">
+                        <div class="avatar-doc">JV</div>
+                        <span class="nombre-doc">Dr. Julián Valdés</span>
+                        <span class="punto-doc">&bull;</span>
+                        <span class="cat-doc">Investigación Académica</span>
+                        <span class="punto-doc">&bull;</span>
+                        <span class="cat-doc">12 Capítulos</span>
+                    </div>
+
+                    <div class="sinopsis-bloque">
+                        <span class="subtit-sino">SINOPSIS EDITORIAL</span>
+                        <p>Un estudio exhaustivo sobre la evolución de la narrativa contemporánea en la era digital. Valdés explora cómo el minimalismo lingüístico y la fragmentación estructural han redefinido nuestra relación con la lectura profunda. A través de seis estudios de caso verídicos, esta investigación desglosa el "silencio intencional" como herramienta retórica en la literatura del siglo XXI.</p>
+                    </div>
+
+                    <div class="caja-certificaciones">
+                        <div class="cert-header">
+                            <span class="escudo-pq">&#10004;</span> CERTIFICACIONES DE INVESTIGACIÓN
+                        </div>
+                        <div class="cert-grid">
+                            <div class="cert-card">
+                                <span class="ic-verde">&#10004;</span>
+                                <div class="cert-textos">
+                                    <strong>Revisión por Pares</strong>
+                                    <span>Validado por el Consejo de Letras Contemporáneas (2023).</span>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <span class="ic-verde">&#128218;</span>
+                                <div class="cert-textos">
+                                    <strong>Fuentes Citadas</strong>
+                                    <span>Bibliografía indexada con 142 referencias verificables.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section> <!-- Fin Hero Obra -->
+
+
+            <!-- Barra Flotante de Controles -->
+            <div class="barra-obs-flotante">
+                <button class="btn-f-round">&#10014;</button>
+                <button class="btn-f-green"><span class="ic-book">&#128216;</span> Guardar en Colección</button>
+                <button class="btn-f-round">&#8942;</button>
+            </div>
+
+
+            <!-- Sección Índice de Capítulos -->
+            <section class="seccion-capitulos">
+                
+                <div class="cabecera-indices">
+                    <h3>ÍNDICE DE CAPÍTULOS</h3>
+                    <span class="badge-lectura">Lectura estimada: 4h 20m</span>
+                </div>
+
+                <ul class="lista-capitulos">
+                    <li>
+                        <a href="leyendo/index.html" class="link-capitulo" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
+                            <span class="num-cap">01</span>
+                            <span class="tit-cap">Introducción: El Fin de la Elocuencia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="leyendo/index.html" class="link-capitulo" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
+                            <span class="num-cap">02</span>
+                            <span class="tit-cap">Estructuras Fragmentadas en la Red</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="leyendo/index.html" class="link-capitulo" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
+                            <span class="num-cap">03</span>
+                            <span class="tit-cap">El Lector Distraído: Una Nueva Cognición</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="btn-todos-caps">Ver todos los capítulos (12)</button>
+
+            </section>
+
+            <!-- Sección Comentarios -->
+            <section class="seccion-comentarios">
+                
+                <div class="cabecera-indices">
+                    <h3 class="mb-none">COMENTARIOS DE LECTORES</h3>
+                    <a href="#" class="link-comentar"><span class="mas-c">&#10133;</span> Escribir Comentario</a>
+                </div>
+
+                <div class="lista-comentarios">
+                    
+                    <div class="card-comentario">
+                        <div class="header-comentario">
+                            <div class="avatar-c c-naranja">MA</div>
+                            <div class="datos-us-c">
+                                <strong>Marco Aurelio G.</strong>
+                                <span>HACE 2 DÍAS</span>
+                            </div>
+                        </div>
+                        <p class="texto-c">Impresionante nivel de detalle. El capítulo sobre la fragmentación en la red cambió totalmente mi perspectiva sobre cómo escribo mis propios borradores. ¡Altamente recomendado!</p>
+                        <div class="acciones-c">
+                            <button class="btn-like"><span class="like-c">&#128077;</span> 24</button>
+                            <button class="btn-reply">&#8617; Responder</button>
+                        </div>
+                    </div>
+
+                    <div class="card-comentario">
+                        <div class="header-comentario">
+                            <div class="avatar-c c-rojo">ES</div>
+                            <div class="datos-us-c">
+                                <strong>Elena Sanz</strong>
+                                <span>HACE 1 SEMANA</span>
+                            </div>
+                        </div>
+                        <p class="texto-c">Un poco denso en los primeros capítulos, pero la conclusión vale totalmente la pena. Es una lectura obligatoria para cualquier editor moderno.</p>
+                        <div class="acciones-c">
+                            <button class="btn-like"><span class="like-c">&#128077;</span> 12</button>
+                            <button class="btn-reply">&#8617; Responder</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </div>
 </body>
 </html>

@@ -2,43 +2,201 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Explorar - Axioma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Biblioteca</title>
     <link rel="stylesheet" href="style.css">
     <base href="../">
 </head>
 <body>
-    <nav class="nav">
-        <a href="main/index.html" class="logo">Axioma</a>
-        <ul class="mn">
-            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
-            <li><a href="explorador/index.html" class="lk on">Explorar</a></li>
-            <li class="auth hid"><a href="panel_autor/index.html" class="lk">Mis Obras</a></li>
-        </ul>
-        <div class="act">
-            <div id="a1">
-                <a href="login/index.html" class="btn btn-o">Entrar</a>
-                <a href="registro/index.html" class="btn btn-p">Registro</a>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar (Idéntico visualmente, activo en Biblioteca) -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
             </div>
-            <div id="a2" class="hid">
-                <a href="perfil/index.html" id="a3" class="usr"></a>
-                <button id="a4" class="btn btn-d">Salir</button>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
             </div>
-        </div>
-    </nav>
-    <main class="main">
-        <h2 class="title">Explorar Obras</h2>
-        <div class="search-bar">
-            <input type="text" id="a5" class="search-in">
-            <select id="a6" class="search-sel">
-                <option value="todos">Todos los tipos</option>
-                <option value="libro">Libro</option>
-                <option value="investigacion">Investigación</option>
-            </select>
-        </div>
-        <div id="a7" class="grid"></div>
-        <p id="a8" class="empty hid">No se encontraron obras con esos criterios.</p>
-    </main>
-    <div id="a9" class="toast-box"></div>
-    <script src="explorador/main.js"></script>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                                <a href="mis_obras/index.html" class="item-menu">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Explorador -->
+        <main class="panel-derecho">
+            <header class="encabezado-escritorio">
+                <h1>Explorar Biblioteca</h1>
+                <p>Descubre nuevas obras, manuscritos e investigaciones de la comunidad.</p>
+            </header>
+
+            <div class="zona-busqueda">
+                <span class="icono-busqueda">&#128269;</span>
+                <input type="text" id="buscador-vivo" class="input-busqueda" placeholder="Busca por título, autor o género (Ej. Ficción, Medieval)...">
+            </div>
+
+            <div class="rejilla-explorador" id="contenedor-cards">
+                
+                <!-- Card hardcodeada 1 -->
+                <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                <div class="tarjeta-explorador">
+                    <div class="portada-exp bg-osocuro">
+                        <span class="tag-tipo">NOVELA</span>
+                    </div>
+                    <div class="info-exp">
+                        <h3>El Alquimista de Sombras</h3>
+                        <p class="autor-exp">Por Axioma Studio</p>
+                        <p class="desc-exp">En un mundo donde la luz es una moneda de cambio...</p>
+                        <div class="stats-exp">
+                            <span class="rating-exp">&#9733; 4.8</span>
+                            <span class="lecturas-exp">12k lecturas</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Card hardcodeada 2 -->
+                <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                <div class="tarjeta-explorador">
+                    <div class="portada-exp bg-rojo">
+                        <span class="tag-tipo">NOVELA</span>
+                    </div>
+                    <div class="info-exp">
+                        <h3>Crónicas del Vacío</h3>
+                        <p class="autor-exp">Por Elena R.</p>
+                        <p class="desc-exp">La última frontera no es el espacio, sino la memoria.</p>
+                        <div class="stats-exp">
+                            <span class="rating-exp">&#9733; 4.6</span>
+                            <span class="lecturas-exp">8.5k lecturas</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Card hardcodeada 3 -->
+                <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                <div class="tarjeta-explorador">
+                    <div class="portada-exp bg-libros">
+                        <span class="tag-tipo">INVESTIGACIÓN</span>
+                    </div>
+                    <div class="info-exp">
+                        <h3>Simbolismo Medieval en Europa</h3>
+                        <p class="autor-exp">Por Javier M.</p>
+                        <p class="desc-exp">Documentación técnica para la saga de los reinos caídos.</p>
+                        <div class="stats-exp">
+                            <span class="rating-exp">&#9733; 4.9</span>
+                            <span class="lecturas-exp">3k consultas</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Card hardcodeada 4 -->
+                <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                <div class="tarjeta-explorador">
+                    <div class="portada-exp bg-ciencia">
+                        <span class="tag-tipo">INVESTIGACIÓN</span>
+                    </div>
+                    <div class="info-exp">
+                        <h3>Botánica de Ficción</h3>
+                        <p class="autor-exp">Por Sofía L.</p>
+                        <p class="desc-exp">Catálogo de plantas venenosas inventadas para worldbuilding.</p>
+                        <div class="stats-exp">
+                            <span class="rating-exp">&#9733; 4.2</span>
+                            <span class="lecturas-exp">1.2k consultas</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <!-- Card hardcodeada 5 -->
+                <a href="lectura/index.html" style="text-decoration:none; color:inherit; display:block;">
+                <div class="tarjeta-explorador">
+                    <div class="portada-exp bg-gris">
+                        <span class="tag-tipo">POESÍA</span>
+                    </div>
+                    <div class="info-exp">
+                        <h3>Ecos del Silencio</h3>
+                        <p class="autor-exp">Por Usuario Anónimo</p>
+                        <p class="desc-exp">Versos nacidos en el modo zen infinito. Pura prosa libre.</p>
+                        <div class="stats-exp">
+                            <span class="rating-exp">&#9733; 5.0</span>
+                            <span class="lecturas-exp">500 lecturas</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+            </div>
+            
+            <div id="mensaje-vacio" style="display: none; padding: 40px; text-align: center; color: #6B7280;">
+                No se encontraron coincidencias para tu búsqueda.
+            </div>
+
+        </main>
+    </div>
+
+    <!-- 
+      Pequeñísimo mini-script en línea única para cumplir con 
+      "buscando en vivo y eliminando opciones" sin tener que generar/cargar 
+      un archivo JS externo pesado de lógica.
+    -->
+    <script>
+        document.getElementById('buscador-vivo').addEventListener('input', function(e) {
+            let filtro = e.target.value.toLowerCase();
+            let tarjetas = document.querySelectorAll('.tarjeta-explorador');
+            let visibles = 0;
+            tarjetas.forEach(function(tarjeta) {
+                let texto = tarjeta.innerText.toLowerCase();
+                if(texto.includes(filtro)) { tarjeta.style.display = 'flex'; visibles++; } 
+                else { tarjeta.style.display = 'none'; }
+            });
+            document.getElementById('mensaje-vacio').style.display = visibles === 0 ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>

@@ -1,32 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Axioma</title>
     <link rel="stylesheet" href="style.css">
     <base href="../">
 </head>
+
 <body>
-    <nav class="nav">
-        <a href="main/index.html" class="logo">Axioma</a>
-        <ul class="mn">
-            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
-            <li><a href="explorador/index.html" class="lk">Explorar</a></li>
-        </ul>
-    </nav>
-    <main class="main">
-        <form id="a1" class="form">
-            <h2>Registro</h2>
-            <label for="a2">Nombre Completo</label>
-            <input type="text" id="a2" required>
-            <label for="a3">Correo Electrónico</label>
-            <input type="email" id="a3" required>
-            <label for="a4">Contraseña</label>
-            <input type="password" id="a4" required minlength="6">
-            <button class="btn btn-p btn-fw">Crear Cuenta</button>
-            <a href="login/index.html" class="form-lk">¿Ya tienes cuenta? Ingresa</a>
-        </form>
-    </main>
-    <script src="registro/main.js"></script>
+    <div class="panel-doble">
+        <section class="zona-cartel">
+            <a href="main/index.html" class="logo">Axioma</a>
+
+            <div class="texto-cartel">
+                <h1>Comienza tu obra maestra.</h1>
+                <p>Un espacio diseñado para proteger tu enfoque y elevar tu prosa al siguiente nivel editorial.</p>
+            </div>
+
+            <div class="pie-cartel">
+                <div class="avatares">
+                    <div class="avatar">A</div>
+                    <div class="avatar">R</div>
+                    <div class="avatar">L</div>
+                </div>
+                <span>+5,000 escritores activos</span>
+            </div>
+        </section>
+
+        <section class="zona-form">
+            <div class="bloque-form">
+                <h2>Crea tu cuenta</h2>
+                <p class="subtit">Únete a la comunidad de escritores de élite.</p>
+
+                <form id="a1" class="form">
+                    <div class="campo">
+                        <label for="a2">NOMBRE COMPLETO</label>
+                        <input type="text" id="a2" placeholder="Nombre completo" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="a3">CORREO ELECTRÓNICO</label>
+                        <input type="email" id="a3" placeholder="nombre@ejemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="a4">CONTRASEÑA</label>
+                        <input type="password" id="a4" placeholder="••••••••" required minlength="6">
+                    </div>
+
+                    <div class="campo">
+                        <label for="a5">CONFIRMAR CONTRASEÑA</label>
+                        <input type="password" id="a5" placeholder="••••••••" required minlength="6">
+                    </div>
+
+                    <div class="caja-check">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Acepto los <a href="legal/terminos.html" class="link-term">Términos y Condiciones</a></label>
+                    </div>
+
+                    <button type="submit" class="btn btn-p btn-ancho">Crear mi cuenta &rarr;</button>
+
+                    <a href="login/index.html" class="link-inferior">¿Ya tienes una cuenta? <strong>Iniciar
+                            sesión</strong></a>
+                </form>
+
+                <div class="pie-form">
+                    <a href="legal/privacidad.html">PRIVACIDAD</a>
+                    <a href="sobre_nosotros/index.html">SOPORTE</a>
+                    <a href="legal/terminos.html">TERMINOS</a>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

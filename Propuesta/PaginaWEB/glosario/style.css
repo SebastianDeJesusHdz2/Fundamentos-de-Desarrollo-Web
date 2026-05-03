@@ -1,0 +1,148 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111827; 
+    background: #FAFAFA;
+    line-height: 1.6; 
+}
+
+/* Sidebar Compartida */
+.pantalla-dashboard { display: flex; min-height: 100vh; }
+.panel-izquierdo { width: 260px; background: #FFF; border-right: 1px solid #E5E7EB; display: flex; flex-direction: column; position: fixed; height: 100vh; overflow-y: auto; z-index: 100; }
+.logo-area { padding: 25px 25px 15px; }
+.logo-texto { font-size: 18px; font-weight: 800; color: #064E3B; }
+.titulo-menu { padding: 10px 25px 20px; display: flex; flex-direction: column; }
+.titulo-menu strong { font-size: 14px; color: #111827; }
+.titulo-menu span { font-size: 10px; color: #6B7280; letter-spacing: 1px; margin-top: 2px; }
+.menu-lateral { display: flex; flex-direction: column; padding: 0 10px; flex: 1; }
+.item-menu { display: flex; align-items: center; padding: 12px 15px; margin-bottom: 5px; border-radius: 8px; color: #4B5563; text-decoration: none; font-size: 13px; font-weight: 500; transition: background 0.2s; }
+.icono-menu { margin-right: 12px; font-size: 16px; opacity: 0.8; }
+.item-menu:hover:not(.activo) { background: #E5E7EB; }
+.item-menu.activo { background: #E5E7EB; color: #064E3B; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border-left: 3px solid #064E3B; border-top-left-radius: 0; border-bottom-left-radius: 0; font-weight: 700; }
+.menu-abajo { padding: 20px; margin-top: auto; }
+.btn-oscuro { display: flex; align-items: center; justify-content: center; background: #064E3B; color: #FFF; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; gap: 8px; transition: background 0.2s; }
+.btn-oscuro:hover { background: #04382B; }
+.btn-bloque { width: 100%; }
+.linea-divisoria { height: 1px; background: #E5E7EB; margin: 20px 0; }
+.item-secundario { display: flex; align-items: center; padding: 10px 5px; color: #4B5563; text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.item-secundario:hover { color: #111827; }
+
+/* PANEL DERECHO: Glosario */
+.panel-derecho { flex: 1; margin-left: 260px; padding: 40px 60px; display: flex; flex-direction: column; background: #FAFAEA; background-image: linear-gradient(to bottom, #FAFAFA, #F4F5F2); min-height: 100vh;}
+
+.cabecera-glosario { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+.titulos-glo { max-width: 600px; }
+.pre-t-glo { font-size: 10px; font-weight: 800; color: #059669; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; display: block; }
+.titulos-glo h1 { font-size: 32px; font-weight: 800; color: #111827; margin-bottom: 10px; line-height: 1.1; letter-spacing: -0.5px;}
+.titulos-glo p { font-size: 14px; color: #4B5563; font-style: italic;}
+
+.acciones-top-glo { display: flex; gap: 15px; }
+.btn-filtrar-glo { background: #F3F4F6; border: none; padding: 12px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; color: #374151; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-filtrar-glo:hover { background: #E5E7EB; }
+.btn-nueva-carpeta { background: #064E3B; border: none; padding: 12px 25px; border-radius: 8px; font-size: 13px; font-weight: 700; color: #FFF; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background 0.2s; }
+.btn-nueva-carpeta:hover { background: #04382B; }
+
+/* Grid de Carpetas */
+.grid-carpetas-glo { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 60px; }
+
+.card-carpeta { background: #FFF; border-radius: 16px; padding: 30px; border: 1px solid transparent; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; min-height: 220px;}
+.card-carpeta:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.06); border: 1px solid #E5E7EB; }
+
+.header-card-c { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 25px;}
+.icono-carpeta { width: 44px; height: 44px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 20px; color: #064E3B;}
+.bg-verde-claro { background: #D1FAE5; }
+.ic-c-in { opacity: 0.9; }
+.btn-kebab-glo { background: transparent; border: none; color: #9CA3AF; font-size: 20px; font-weight: 800; cursor: pointer; transition: color 0.2s;}
+.btn-kebab-glo:hover { color: #111827; }
+
+.card-carpeta h2 { font-size: 20px; font-weight: 800; color: #111827; margin-bottom: 5px;}
+.card-carpeta p { font-size: 13px; color: #6B7280; margin-bottom: 30px;}
+
+.footer-card-c { display: flex; justify-content: space-between; align-items: center; margin-top: auto;}
+.pill-conteo { background: #D0F7DE; color: #065F46; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; }
+.arrow-glo { color: #9CA3AF; font-size: 16px; font-weight: 800; transition: transform 0.2s; }
+.card-carpeta:hover .arrow-glo { transform: translateX(5px); color: #064E3B;}
+
+.card-crear-cat { background: transparent; border-radius: 16px; border: 2px dashed #D1D5DB; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px; cursor: pointer; transition: all 0.2s; min-height: 220px; gap: 15px;}
+.card-crear-cat:hover { border-color: #9CA3AF; background: #F9FAFB; }
+.btn-plus-circ { width: 40px; height: 40px; border-radius: 50%; background: #E5E7EB; display: flex; justify-content: center; align-items: center; font-size: 22px; color: #4B5563; }
+.card-crear-cat span { font-size: 13px; font-weight: 700; color: #6B7280; }
+
+/* Panel Flotante + Consejo IA */
+.panel-consejo { position: relative; margin-top: auto; padding-top: 40px; }
+
+.barra-herramientas-glo { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #FFF; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); display: flex; align-items: center; padding: 8px 15px; border: 1px solid #F3F4F6;}
+.tool-ic-glo { background: transparent; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 60px; font-size: 7px; font-weight: 800; color: #6B7280; letter-spacing: 1px; cursor: pointer; transition: color 0.2s;}
+.tool-ic-glo:hover { color: #111827; }
+.t-icon { font-size: 18px; color: #4B5563; margin-bottom: 2px; }
+.div-t { width: 1px; height: 30px; background: #F3F4F6; margin: 0 5px;}
+.btn-fab-glo { background: #064E3B; border: none; width: 40px; height: 40px; border-radius: 50%; color: #FFF; font-size: 22px; cursor: pointer; font-weight: 400; box-shadow: 0 4px 10px rgba(6, 78, 59, 0.3); margin-left: 10px;}
+
+.contenido-consejo { background: #FFF; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); padding: 40px; display: flex; align-items: center; gap: 40px; border: 1px solid #F3F4F6;}
+.textos-consejo { flex: 1; }
+.textos-consejo h2 { font-size: 20px; font-weight: 800; color: #111827; margin-bottom: 15px;}
+.textos-consejo p { font-size: 13px; color: #6B7280; line-height: 1.6; margin-bottom: 25px;}
+.link-ia-glo { font-size: 13px; font-weight: 800; color: #059669; text-decoration: none; display: flex; align-items: center; gap: 8px;}
+.ic-ia { font-size: 16px; }
+
+/* Mock de la libreta del consejo */
+.img-mock-glo { background: #F3F4F6; width: 280px; height: 180px; border-radius: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotate(-3deg); box-shadow: 2px 5px 15px rgba(0,0,0,0.05); border: 1px solid #E5E7EB; flex-shrink: 0; position: relative;}
+.img-mock-glo::before { content: ""; position: absolute; width: 80%; height: 4px; background: #3B82F6; top: 30px; transform: rotate(5deg); border-radius: 20px; }
+.writing-mock { font-family: 'Brush Script MT', cursive, serif; font-size: 36px; color: #111827; transform: rotate(-5deg); line-height: 0.8;}
+.mini-mock { font-size: 10px; color: #6B7280; text-transform: lowercase; font-style: italic; transform: rotate(-5deg); text-align: center; margin-top: 5px;}
+
+
+/* -------------------------------------
+   VISTA INTERNA: CARPETA GENERAL (Términos)
+   ------------------------------------- */
+
+.topbar-carpeta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #E5E7EB; margin-top: -10px; }
+.link-volver { font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s;}
+.link-volver:hover { color: #111827;}
+.acciones-perfil-top { display: flex; align-items: center; gap: 15px;}
+.bell-icon { font-size: 16px; color: #6B7280; cursor: pointer;}
+.avatar-top { width: 32px; height: 32px; border-radius: 50%; background: #064E3B; color: #FFF; display: flex; justify-content: center; align-items: center; font-size: 12px; font-weight: 800;}
+
+.cabecera-carpeta { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; }
+.miga-pan-carpeta { font-size: 10px; font-weight: 800; color: #6B7280; letter-spacing: 1.5px; margin-bottom: 8px;}
+.sep-miga { margin: 0 5px; color: #D1D5DB;}
+.info-carpeta h1 { font-size: 32px; font-weight: 800; color: #111827; margin-bottom: 10px; line-height: 1.1; letter-spacing: -0.5px;}
+.info-carpeta p { font-size: 15px; color: #4B5563; max-width: 600px;}
+.btn-anadir-termino { background: #064E3B; color: #FFF; border: none; padding: 14px 25px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background 0.2s; white-space: nowrap;}
+.btn-anadir-termino:hover { background: #04382B;}
+
+.barra-busqueda-carpeta { display: flex; gap: 15px; background: #FFF; padding: 10px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid #E5E7EB; margin-bottom: 40px;}
+.input-contenedor { display: flex; align-items: center; flex: 1; padding: 0 15px;}
+.ic-lupa-carpeta { font-size: 18px; color: #9CA3AF; margin-right: 15px;}
+.input-contenedor input { width: 100%; border: none; outline: none; font-size: 15px; color: #111827;}
+.input-contenedor input::placeholder { color: #9CA3AF;}
+.btn-filtro-carpeta { background: #F9FAFB; border: 1px solid #E5E7EB; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; color: #4B5563; display: flex; align-items: center; gap: 8px; cursor: pointer; transition: background 0.2s;}
+.btn-filtro-carpeta:hover { background: #F3F4F6;}
+
+.grid-terminos { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px;}
+
+.card-termino { background: #FFF; border-radius: 12px; padding: 25px; border: 1px solid #F3F4F6; box-shadow: 0 4px 10px rgba(0,0,0,0.02); display: flex; flex-direction: column; transition: transform 0.2s;}
+.card-termino:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+.borde-izq-verde { border-left: 4px solid #10B981; }
+
+.ct-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;}
+.ct-header h3 { font-size: 18px; font-weight: 800; color: #064E3B;}
+.ic-edit { color: #9CA3AF; cursor: pointer; transition: color 0.2s; font-size: 14px;}
+.ic-edit:hover { color: #111827;}
+
+.card-termino p { font-size: 13px; color: #4B5563; line-height: 1.6; margin-bottom: 25px;}
+
+.badges-termino { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;}
+.badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700;}
+.verde-badge { background: #D1FAE5; color: #065F46; }
+.gris-badge { background: #F3F4F6; color: #4B5563; }
+.rojo-badge { background: #FEE2E2; color: #991B1B; }
+
+.card-crear-termino { background: transparent; border-radius: 12px; border: 2px dashed #D1D5DB; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px 20px; cursor: pointer; transition: all 0.2s; gap: 8px; min-height: 200px;}
+.card-crear-termino:hover { border-color: #064E3B; background: #F9FAFB;}
+.iconos-crear-accion { display: flex; gap: 15px; margin-bottom: 10px; background: #FFF; padding: 10px 20px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #F3F4F6;}
+.ic-ca { font-size: 16px; color: #6B7280; font-weight: bold; cursor: pointer;}
+.text-rojo { color: #EF4444;}
+.card-crear-termino strong { font-size: 14px; font-weight: 800; color: #374151;}
+.card-crear-termino span { font-size: 12px; color: #9CA3AF;}

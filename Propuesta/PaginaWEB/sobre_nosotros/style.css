@@ -1,0 +1,244 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111827; 
+    background: #FAFAFA; /* Un gris hiper sutil casi blanco */
+    line-height: 1.6; 
+}
+
+/* Sidebar compartida idéntica al dashboard */
+.pantalla-dashboard { display: flex; min-height: 100vh; }
+.panel-izquierdo { width: 260px; background: #F3F4F6; border-right: 1px solid #E5E7EB; display: flex; flex-direction: column; position: fixed; height: 100vh; overflow-y: auto; z-index: 100; }
+.logo-area { padding: 25px 25px 15px; }
+.logo-texto { font-size: 18px; font-weight: 800; color: #064E3B; }
+.titulo-menu { padding: 10px 25px 20px; display: flex; flex-direction: column; }
+.titulo-menu strong { font-size: 14px; color: #111827; }
+.titulo-menu span { font-size: 10px; color: #6B7280; letter-spacing: 1px; margin-top: 2px; }
+.menu-lateral { display: flex; flex-direction: column; padding: 0 10px; flex: 1; }
+.item-menu { display: flex; align-items: center; padding: 12px 15px; margin-bottom: 5px; border-radius: 8px; color: #4B5563; text-decoration: none; font-size: 13px; font-weight: 500; transition: background 0.2s; }
+.icono-menu { margin-right: 12px; font-size: 16px; opacity: 0.8; }
+.item-menu:hover { background: #E5E7EB; }
+.item-menu.activo { background: #FFF; color: #111827; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border-left: 3px solid #2E8B57; border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.menu-abajo { padding: 20px; margin-top: auto; }
+.btn-oscuro { display: flex; align-items: center; justify-content: center; background: #064E3B; color: #FFF; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; gap: 8px; transition: background 0.2s; }
+.btn-oscuro:hover { background: #04382B; }
+.btn-bloque { width: 100%; }
+.linea-divisoria { height: 1px; background: #E5E7EB; margin: 20px 0; }
+.item-secundario { display: flex; align-items: center; padding: 10px 5px; color: #4B5563; text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.item-secundario:hover { color: #111827; }
+.activo-secundario { color: #2E8B57; font-weight: bold; }
+
+/* Main Content Wrapper */
+.panel-derecho { 
+    flex: 1; 
+    margin-left: 260px; 
+    padding: 60px 80px; 
+}
+
+/* ==================================================
+   Hero Section Layout
+   ================================================== */
+.seccion-hero-nosotros {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.texto-hero { flex: 1; padding-right: 20px; }
+.tag-verde-claro { color: #2E8B57; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px; display: inline-block; }
+.texto-hero h1 { font-size: 46px; color: #111827; font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -1px; }
+.texto-verde { color: #064E3B; }
+.parrafo-hero { font-size: 15px; color: #4B5563; line-height: 1.7; width: 90%; }
+
+.visual-hero {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo-papel {
+    width: 80%;
+    height: 90%;
+    background: #E5E7EB; /* Gris plomizo para simular la mesa/fondo */
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.05);
+}
+
+.cuaderno-mock {
+    width: 65%;
+    height: 75%;
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    border-right: 8px solid #F3F4F6;
+}
+
+.lapiz-mock {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    font-size: 40px;
+    transform: rotate(-35deg);
+    color: #D2B48C;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+}
+
+.tarjeta-flotante {
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+    background: #FFF;
+    padding: 20px 25px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    border: 1px solid #F3F4F6;
+}
+
+.tarjeta-flotante h4 { color: #064E3B; font-size: 16px; margin-bottom: 8px; font-weight: 700; }
+.tarjeta-flotante p { color: #6B7280; font-size: 11px; line-height: 1.5; }
+
+/* ==================================================
+   Rejilla de Secciones Modulares (Historia / Valores)
+   ================================================== */
+.rejilla-centro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.m-tope { margin-bottom: 80px; }
+
+/* Historia (Gris) */
+.tarjeta-gris {
+    background: #F9FAFB;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #F3F4F6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.icono-historia { color: #064E3B; font-size: 24px; margin-bottom: 20px; }
+.tarjeta-gris h2 { font-size: 22px; color: #111827; margin-bottom: 15px; font-weight: 800; }
+.tarjeta-gris p { font-size: 14px; color: #4B5563; line-height: 1.6; margin-bottom: 30px; flex: 1; }
+
+.toolbar-falso {
+    background: #FFF;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid #E5E7EB;
+    margin-bottom: 12px;
+}
+.tools-izq b, .tools-izq i, .tools-izq span { margin-right: 15px; font-size: 14px; color: #4B5563; cursor: default; }
+.tools-der { display: flex; align-items: center; gap: 8px; }
+.tools-der span { font-size: 9px; color: #9CA3AF; letter-spacing: 1px; }
+.punto-verde { width: 8px; height: 8px; background: #10B981; border-radius: 50%; }
+
+.etiqueta-baja { font-size: 9px; color: #064E3B; text-align: right; font-weight: 800; letter-spacing: 1px; }
+
+/* Valores (Verde Oscuro) */
+.tarjeta-verde {
+    background: #065F46;
+    border-radius: 20px;
+    padding: 40px;
+    color: #FFF;
+    box-shadow: 0 15px 30px rgba(6, 95, 70, 0.15);
+}
+
+.tarjeta-verde h2 { font-size: 22px; margin-bottom: 30px; font-weight: 800; }
+.lista-valores { display: flex; flex-direction: column; gap: 20px; }
+.item-valor { display: flex; gap: 15px; align-items: flex-start; }
+.icono-val { background: rgba(255,255,255,0.1); width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 12px; flex-shrink: 0; }
+.texto-val strong { display: block; font-size: 14px; margin-bottom: 4px; }
+.texto-val p { font-size: 12px; color: #A7F3D0; line-height: 1.5; }
+
+/* ==================================================
+   Soporte y Mapa
+   ================================================== */
+.tarjeta-transparente { padding: 20px 0; }
+.tarjeta-transparente h2 { font-size: 24px; color: #111827; margin-bottom: 10px; font-weight: 800; }
+.parrafo-soporte { font-size: 14px; color: #6B7280; margin-bottom: 30px; width: 90%; line-height: 1.5; }
+
+.boton-contacto {
+    display: flex;
+    background: #FFF;
+    border: 1px solid #F3F4F6;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.boton-contacto:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); }
+
+.caja-icono {
+    width: 36px; height: 36px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; font-size: 16px;
+}
+.bg-verde-claro { background: #D1FAE5; color: #065F46; }
+
+.info-contacto { flex: 1; display: flex; flex-direction: column; }
+.info-contacto strong { font-size: 14px; color: #111827; margin-bottom: 3px; display: flex; align-items: center; }
+.info-contacto span { font-size: 11px; color: #6B7280; }
+.tag-online { color: #10B981; font-size: 9px; font-weight: 800; letter-spacing: 1px; margin-left: 10px; }
+.flecha { color: #D1D5DB; font-size: 14px; }
+
+/* Mapa */
+.tarjeta-mapa {
+    background: #FFF; border-radius: 20px; overflow: hidden; border: 1px solid #F3F4F6; box-shadow: 0 6px 12px rgba(0,0,0,0.03); display: flex; flex-direction: column;
+}
+.imagen-mapa {
+    height: 180px; background: #E5E7EB; /* Sustituto visual de Google Maps */ position: relative; display: flex; justify-content: center; align-items: center;
+    /* Dibujamos unas lineas super suaves para simular calles usando gradients */
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.3) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.3) 75%, rgba(255,255,255,.3) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.3) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.3) 75%, rgba(255,255,255,.3) 76%, transparent 77%, transparent); background-size: 40px 40px;
+}
+.pin-mapa { font-size: 30px; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2)); }
+.info-mapa { padding: 25px; }
+.info-mapa strong { display: block; font-size: 14px; margin-bottom: 8px; color: #111827; }
+.info-mapa p { font-size: 12px; color: #6B7280; line-height: 1.6; margin-bottom: 15px; }
+.resalte { color: #111827; font-weight: 600; }
+.direccion-mini { font-size: 9px; letter-spacing: 1px; color: #9CA3AF; font-weight: 800; display: block; }
+
+
+/* ==================================================
+   Footer (Centrado)
+   ================================================== */
+.footer-nosotros {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #F3F4F6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-nosotros h3 { font-family: Georgia, serif; font-size: 22px; font-style: italic; color: #111827; margin-bottom: 15px; font-weight: normal; }
+.footer-nosotros p { font-size: 13px; color: #6B7280; margin-bottom: 25px; line-height: 1.6; }
+
+.botones-footer { display: flex; justify-content: center; gap: 15px; }
+.btn-pildora-verde { background: #A7F3D0; color: #064E3B; font-size: 11px; font-weight: 800; padding: 10px 20px; border-radius: 30px; text-decoration: none; transition: background 0.2s; }
+.btn-pildora-verde:hover { background: #6EE7B7; }
+.btn-pildora-blanca { background: #FFF; color: #374151; font-size: 11px; font-weight: 800; padding: 10px 20px; border-radius: 30px; text-decoration: none; border: 1px solid #E5E7EB; transition: border-color 0.2s; }
+.btn-pildora-blanca:hover { border-color: #9CA3AF; }
+
+@media (max-width: 1100px) {
+    .seccion-hero-nosotros { flex-direction: column; }
+    .rjilla-centro { grid-template-columns: 1fr; }
+}

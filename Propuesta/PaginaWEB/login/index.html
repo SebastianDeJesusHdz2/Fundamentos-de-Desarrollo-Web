@@ -2,30 +2,68 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Axioma</title>
     <link rel="stylesheet" href="style.css">
     <base href="../">
 </head>
 <body>
-    <nav class="nav">
-        <a href="main/index.html" class="logo">Axioma</a>
-        <ul class="mn">
-            <li><a href="inicio/index.html" class="lk">Inicio</a></li>
-            <li><a href="explorador/index.html" class="lk">Explorar</a></li>
-        </ul>
-    </nav>
-    <main class="main">
-        <form id="a1" class="form">
-            <h2>Ingresar</h2>
-            <label for="a2">Correo Electrónico</label>
-            <input type="email" id="a2" required>
-            <label for="a3">Contraseña</label>
-            <input type="password" id="a3" required>
-            <div id="a4" class="err hid"></div>
-            <button class="btn btn-p btn-fw">Ingresar</button>
-            <a href="registro/index.html" class="form-lk">¿No tienes cuenta? Regístrate</a>
-        </form>
-    </main>
-    <script src="login/main.js"></script>
+    <div class="zona-login">
+        <header class="cabeza-login">
+            <h1><a href="main/index.html" style="text-decoration: none; color: inherit;">Axioma</a></h1>
+            <p>Regresa a tu espacio de creación digital</p>
+        </header>
+
+        <main class="tarjeta">
+            <form id="a1" class="form">
+                <div class="campo">
+                    <label for="a2">Usuario/Correo</label>
+                    <div class="marco">
+                        <span class="icono">&#128100;</span>
+                        <input type="email" id="a2" placeholder="nombre@ejemplo.com" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <div class="fila-etiq">
+                        <label for="a3">Contraseña</label>
+                        <a href="#" class="link-olvido">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="marco">
+                        <span class="icono">&#128274;</span>
+                        <input type="password" id="a3" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div id="a4" class="err oculto"></div>
+
+                <button type="submit" class="btn btn-p btn-ancho">Ingresar &rarr;</button>
+
+                <div class="divisor">
+                    <span>O CONTINÚA CON</span>
+                </div>
+
+                <div class="zona-redes">
+                    <button type="button" class="btn btn-redes"><b>G</b> Google</button>
+                    <button type="button" class="btn btn-redes"><b>A</b> Apple</button>
+                </div>
+
+                <div class="pie-tarjeta">
+                    <p>¿Aún no tienes un manuscrito? <a href="registro/index.html" class="link-sec">Ir al registro</a></p>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <footer class="pie-pagina">
+        <div class="links-pie">
+            <a href="legal/terminos.html">TÉRMINOS DE SERVICIO</a>
+            <a href="legal/privacidad.html">PRIVACIDAD</a>
+        </div>
+        <div class="marca-agua">
+            DONDE LAS PALABRAS COBRAN VIDA<br>
+            EST. 2024 &mdash; PREMIUM STUDIO
+        </div>
+    </footer>
 </body>
 </html>

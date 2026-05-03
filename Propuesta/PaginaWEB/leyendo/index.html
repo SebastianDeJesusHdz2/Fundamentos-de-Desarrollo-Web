@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Leyendo</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    
+    <div class="pantalla-lector">
+        
+        <!-- BARRA LATERAL ULTRA MINIMALISTA -->
+        <aside class="barra-lector">
+            <div class="logo-superior">
+                <a href="main/index.html" class="logo-btn">&#128214;</a>
+            </div>
+            
+            <nav class="iconos-lector">
+                <!-- Se asume que este icono es el explorador/biblioteca -->
+                <a href="explorador/index.html" class="nav-btn activo" title="Biblioteca">&#128218;</a>
+
+                <a href="mis_obras/index.html" class="nav-btn" title="Mis Obras">&#128214;</a>
+
+
+            </nav>
+
+            <div class="zona-inferior-lector">
+                <!-- Indicador de Progreso Vertical -->
+                <div class="linea-progreso-v">
+                    <div class="txt-rotado">PROGRESO 34%</div>
+                    <div class="barra-base-v">
+                        <div class="barra-lleno-v" style="height: 34%;"></div>
+                    </div>
+                </div>
+                
+                <a href="configuracion/index.html" class="nav-btn btn-engranaje" title="Configuraciones">&#9881;</a>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL DE LECTURA -->
+        <main class="zona-lectura">
+            
+            <!-- Cabecera Superior -->
+            <header class="cabecera-lectura">
+                <div class="izq-cabecera">
+                    <a href="lectura/index.html" class="btn-volver">&#8592;</a>
+                    <div class="textos-contexto">
+                        <span class="etiqueta-leyendo">LEYENDO AHORA</span>
+                        <strong>El Eco de los Alquimistas &mdash; Capítulo IV</strong>
+                    </div>
+                </div>
+                <div class="der-cabecera">
+                    <button class="btn-guardar-progreso"><span class="marcapaginas">&#128278;</span> Guardar progreso</button>
+                </div>
+            </header>
+
+            <!-- Artículo Central (Hoja) -->
+            <article class="hoja-lector">
+                
+                <div class="titulos-capitulo">
+                    <span class="num-cap">CAPÍTULO IV</span>
+                    <h1>La Sombra del Mercurio</h1>
+                    
+                    <div class="divisor-lectura">
+                        <hr>
+                        <span>12 minutos de lectura</span>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="cuerpo-texto">
+                    
+                    <p><span class="letra-capital">L</span>a penumbra del laboratorio no lograba ocultar el brillo metálico que emanaba del crisol. No era el oro que tanto habían buscado las generaciones anteriores, sino algo mucho más antiguo y peligroso. El silencio en la estancia se veía interrumpido únicamente por el goteo rítmico de un condensador en el rincón más alejado.</p>
+                    
+                    <p>Julián se acercó con cautela, sus dedos rozando los bordes de la mesa de roble desgastada. Cada cicatriz en la madera contaba la historia de un fracaso, de una explosión controlada o de una noche de vigilia desesperada. Sin embargo, esta vez el aroma en el aire era distinto: no olía a azufre, sino a ozono y a tierra mojada tras la tormenta.</p>
+
+                    <blockquote class="cita-lector">
+                        "La verdadera transmutación no ocurre en el metal, sino en el observador. El verdadero cambio es invisible."
+                    </blockquote>
+
+                    <p>Recordó las palabras de su maestro mientras ajustaba el flujo del fuego. La llama, normalmente de un naranja vibrante, comenzó a tornarse de un azul cobalto profundo, casi eléctrico. Fue en ese instante cuando comprendió que la fórmula nunca estuvo en los ingredientes, sino en la frecuencia del calor aplicado.</p>
+
+                    <div class="separador-estetico">
+                        <span class="punto-s"></span>
+                        <span class="punto-s"></span>
+                        <span class="punto-s"></span>
+                    </div>
+
+                    <p>Fuera, los tejados de la ciudad vieja comenzaban a recibir los primeros rayos de una luna menguante. Nadie sospechaba que, en aquella pequeña buhardilla, las leyes de la física conocida estaban siendo suavemente reescritas. El mercurio, antes denso y caprichoso, ahora fluía hacia arriba, desafiando la gravedad con una elegancia que resultaba casi hipnótica.</p>
+
+                    <p>Un golpe seco en la puerta lo devolvió a la realidad. No esperaba visitas a esta hora, y mucho menos a alguien que conociera la contraseña rítmica de la Hermandad. Se quedó inmóvil, con el corazón latiendo al mismo compás que el goteo del condensador.</p>
+
+                </div>
+
+                <!-- Footer Navegación Capítulos -->
+                <nav class="navegacion-capitulos">
+                    <a href="lectura/index.html" class="nav-cap izq">
+                        <span class="etiqueta-nav">ANTERIOR</span>
+                        <strong>Capítulo III: El Manuscrito de Sal</strong>
+                    </a>
+                    
+                    <div class="linea-sep-nav"></div>
+
+                    <a href="lectura/index.html" class="nav-cap der">
+                        <span class="etiqueta-nav">SIGUIENTE</span>
+                        <strong>Capítulo V: Las Voces de la Forja</strong>
+                    </a>
+                </nav>
+
+            </article>
+
+            <!-- Acciones Flotantes Laterales (Likes/Share) -->
+            <aside class="acciones-flotantes">
+                <button class="btn-f-circular" title="Me gusta">&#10084;</button>
+                <button class="btn-f-circular" title="Comentar">&#128172;</button>
+                <button class="btn-f-circular" title="Compartir">&#128279;</button>
+            </aside>
+
+            <!-- Barra Inferior Configuración Lector -->
+            <div class="panel-control-lector">
+                <div class="controles-lectura">
+                    <button class="ctrl-btn fw-btn">TT</button>
+                    <button class="ctrl-btn ic-btn">&#128214;</button>
+                    <button class="ctrl-btn ic-btn">&#9728;</button>
+                    <button class="btn-continuar"><span class="triangulo">&#9658;</span> CONTINUAR</button>
+                </div>
+            </div>
+
+        </main>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Personajes Principales</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar Exactamente igual a Inicio / Explorador -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
+            </div>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
+            </div>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                <!-- Borradores Activo porque Glosario es parte de la organización del borrador moderno -->
+                                <a href="mis_obras/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="panel-derecho">
+            
+            <!-- Barra Superior de Navegacion -->
+            <div class="topbar-carpeta">
+                <a href="glosario/index.html" class="link-volver"><span class="flecha">&#8592;</span> Glosario General</a>
+                <div class="acciones-perfil-top">
+                    <!-- Icono campaña simulado -->
+                    <span class="bell-icon">&#128276;</span>
+                    <div class="avatar-top"></div>
+                </div>
+            </div>
+
+            <!-- Cabecera de la Carpeta -->
+            <header class="cabecera-carpeta">
+                <div class="info-carpeta">
+                    <div class="miga-pan-carpeta">BIBLIOTECA <span class="sep-miga">/</span> GLOSARIO</div>
+                    <h1>Personajes Principales</h1>
+                    <p>Compendio detallado de los protagonistas y antagonistas que dan forma a la narrativa central de "Ecos del Velo".</p>
+                </div>
+                <div class="btn-anadir-container">
+                    <button class="btn-anadir-termino"><span class="plus-icon">&#10133;</span> Añadir Nuevo Término</button>
+                </div>
+            </header>
+
+            <!-- Barra de Búsqueda -->
+            <div class="barra-busqueda-carpeta">
+                <div class="input-contenedor">
+                    <span class="ic-lupa-carpeta">&#128269;</span>
+                    <input type="text" placeholder="Buscar términos en esta carpeta...">
+                </div>
+                <button class="btn-filtro-carpeta"><span class="ic-filtras">&#8801;</span> Filtrar</button>
+            </div>
+
+            <!-- Grid de Términos -->
+            <section class="grid-terminos">
+                
+                <!-- Termino 1 -->
+                <div class="card-termino">
+                    <div class="ct-header">
+                        <h3>Elowen Vance</h3>
+                        <span class="ic-edit">&#9998;</span>
+                    </div>
+                    <p>Protagonista principal. Una joven cartógrafa que descubre una antigua habilidad para "leer" la memoria de las piedras. Originaria de los Valles del Sur.</p>
+                    <div class="badges-termino">
+                        <span class="badge verde-badge">Protagonista</span>
+                        <span class="badge gris-badge">Magia</span>
+                        <span class="badge gris-badge">Cartografía</span>
+                    </div>
+                </div>
+
+                <!-- Termino 2 (Con borde izquierdo) -->
+                <div class="card-termino borde-izq-verde">
+                    <div class="ct-header">
+                        <h3>Kaelen Thorne</h3>
+                        <span class="ic-edit">&#9998;</span>
+                    </div>
+                    <p>Mentor de Elowen y guardián de la Biblioteca Prohibida. Posee un pasado oscuro ligado a la Orden de los Susurros.</p>
+                    <div class="badges-termino">
+                        <span class="badge verde-badge">Mentor</span>
+                        <span class="badge gris-badge">Misterioso</span>
+                        <span class="badge gris-badge">Orden</span>
+                    </div>
+                </div>
+
+                <!-- Termino 3 -->
+                <div class="card-termino">
+                    <div class="ct-header">
+                        <h3>Sombra de Malakor</h3>
+                        <span class="ic-edit">&#9998;</span>
+                    </div>
+                    <p>Entidad incorpórea que habita en las ruinas del norte. Se alimenta de los recuerdos perdidos de los viajeros y busca el Ojo de Cristal.</p>
+                    <div class="badges-termino">
+                        <span class="badge rojo-badge">Antagonista</span>
+                        <span class="badge gris-badge">Mito</span>
+                        <span class="badge gris-badge">Sobrenatural</span>
+                    </div>
+                </div>
+
+                <!-- Termino 4 -->
+                <div class="card-termino">
+                    <div class="ct-header">
+                        <h3>Lyra Mistral</h3>
+                        <span class="ic-edit">&#9998;</span>
+                    </div>
+                    <p>Comandante de la guardia de Ciudad Esmeralda. Leal al trono pero escéptica ante las crecientes leyendas sobre el retorno de la magia.</p>
+                    <div class="badges-termino">
+                        <span class="badge verde-badge">Secundario</span>
+                        <span class="badge gris-badge">Militar</span>
+                        <span class="badge gris-badge">Política</span>
+                    </div>
+                </div>
+
+                <!-- Crear Nuevo Término (Dashed) -->
+                <div class="card-crear-termino">
+                    <div class="iconos-crear-accion">
+                        <span class="ic-ca">&#128196;</span>
+                        <span class="ic-ca">&#128193;</span>
+                        <span class="ic-ca">&#10514;</span>
+                        <span class="ic-ca text-rojo">&#128465;</span>
+                    </div>
+                    <strong>Crear nuevo término</strong>
+                    <span>Añade una nueva entrada a tu glosario</span>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

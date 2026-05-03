@@ -1,0 +1,43 @@
+.title {
+    text-align: center;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-item {
+    height: 350px;
+    width: 250px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.product-name {
+    color: cadetblue;
+}
+
+.product-price {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    width: 500px;
+}
+
+span {
+    color: red;
+}
+
+.product-item img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}

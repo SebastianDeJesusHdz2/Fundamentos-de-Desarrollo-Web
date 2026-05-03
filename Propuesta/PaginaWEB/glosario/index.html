@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma - Gestión de Glosario</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="../">
+</head>
+<body>
+    <div class="pantalla-dashboard">
+        <!-- Sidebar Exactamente igual a Inicio / Explorador -->
+        <aside class="panel-izquierdo">
+            <div class="logo-area">
+                <a href="main/index.html" class="logo-texto" style="text-decoration: none; display: inline-block;">Axioma</a>
+            </div>
+
+            <div class="titulo-menu">
+                <strong>Escritorio</strong>
+                <span>MANUSCRITOS</span>
+            </div>
+
+            <nav class="menu-lateral">
+                <a href="inicio/index.html" class="item-menu">
+                    <span class="icono-menu">&#127968;</span> Inicio
+                </a>
+                <a href="explorador/index.html" class="item-menu">
+                    <span class="icono-menu">&#128218;</span> Biblioteca
+                </a>
+                <!-- Borradores Activo porque Glosario es parte de la organización del borrador moderno -->
+                                <a href="mis_obras/index.html" class="item-menu activo">
+                    <span class="icono-menu">&#128214;</span> Mis Obras
+                </a>
+
+                
+                <a href="administracion/index.html" class="item-menu">
+                    <span class="icono-menu">&#128304;</span> Administración
+                </a>
+
+            </nav>
+
+            <div class="menu-abajo">
+                <a href="nueva_obra/index.html" class="btn-oscuro btn-bloque">
+                    <span>&#10133;</span> Escribir Nuevo
+                </a>
+                <div class="linea-divisoria"></div>
+                
+                <a href="sobre_nosotros/index.html" class="item-secundario">
+                    <span class="icono-menu">&#8505;</span> Quiénes Somos
+                </a>
+                <a href="configuracion/index.html" class="item-secundario">
+                    <span class="icono-menu">&#9881;</span> Configuración
+                </a>
+                <div style="display: flex; gap: 5px; margin-top: 5px;">
+                    <a href="legal/terminos.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128193;</span> Términos
+                    </a>
+                    <a href="legal/privacidad.html" class="item-secundario" style="flex: 1; padding: 5px; font-size: 11px; justify-content: center;">
+                        <span class="icono-menu" style="margin-right: 4px;">&#128274;</span> Privacidad
+                    </a>
+                </div>
+                <div class="perfil-editor" style="display:flex; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #E5E7EB;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#064E3B; color:#FFF; display:flex; justify-content:center; align-items:center; font-size:12px; font-weight:800; flex-shrink:0;">JC</div>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="font-size:13px; color:#111827;">Julian Casablancas</strong>
+                        <span style="font-size:11px; color:#6B7280;">Editor Principal</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="panel-derecho">
+            
+            <header class="cabecera-glosario">
+                <div class="titulos-glo">
+                    <span class="pre-t-glo">ORGANIZACIÓN DE LORE</span>
+                    <h1>Gestión de Carpetas de Glosario</h1>
+                    <p>Estructure el universo de su manuscrito categorizando términos, conceptos y entidades fundamentales.</p>
+                </div>
+                <div class="acciones-top-glo">
+                    <button class="btn-filtrar-glo"><span class="ic-filtro">&#8801;</span> Filtrar</button>
+                    <button class="btn-nueva-carpeta"><span class="ic-folder">&#128193;</span> Nueva Carpeta</button>
+                </div>
+            </header>
+
+            <section class="grid-carpetas-glo">
+                
+                <!-- Personajes -->
+                <a href="glosario/carpeta.html" style="text-decoration:none; color:inherit; display:contents;">
+                    <div class="card-carpeta">
+                        <div class="header-card-c">
+                            <div class="icono-carpeta bg-verde-claro"><span class="ic-c-in">&#128101;</span></div>
+                            <button class="btn-kebab-glo">&#8942;</button>
+                        </div>
+                        <h2>Personajes</h2>
+                        <p>Protagonistas, antagonistas y...</p>
+                        <div class="footer-card-c">
+                            <span class="pill-conteo">42 términos</span>
+                            <span class="arrow-glo">&#8594;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lugares -->
+                <a href="glosario/carpeta.html" style="text-decoration:none; color:inherit; display:contents;">
+                    <div class="card-carpeta">
+                        <div class="header-card-c">
+                            <div class="icono-carpeta bg-verde-claro"><span class="ic-c-in">&#128506;</span></div>
+                            <button class="btn-kebab-glo">&#8942;</button>
+                        </div>
+                        <h2>Lugares</h2>
+                        <p>Ciudades, reinos, parajes</p>
+                        <div class="footer-card-c">
+                            <span class="pill-conteo">18 términos</span>
+                            <span class="arrow-glo">&#8594;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Artefactos -->
+                <a href="glosario/carpeta.html" style="text-decoration:none; color:inherit; display:contents;">
+                    <div class="card-carpeta">
+                        <div class="header-card-c">
+                            <div class="icono-carpeta bg-verde-claro"><span class="ic-c-in">&#10024;</span></div>
+                            <button class="btn-kebab-glo">&#8942;</button>
+                        </div>
+                        <h2>Artefactos</h2>
+                        <p>Objetos mágicos, reliquias</p>
+                        <div class="footer-card-c">
+                            <span class="pill-conteo">27 términos</span>
+                            <span class="arrow-glo">&#8594;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cronología -->
+                <a href="glosario/carpeta.html" style="text-decoration:none; color:inherit; display:contents;">
+                    <div class="card-carpeta">
+                        <div class="header-card-c">
+                            <div class="icono-carpeta bg-verde-claro"><span class="ic-c-in">&#128338;</span></div>
+                            <button class="btn-kebab-glo">&#8942;</button>
+                        </div>
+                        <h2>Cronología</h2>
+                        <p>Eras, eventos históricos, guerras y...</p>
+                        <div class="footer-card-c">
+                            <span class="pill-conteo">12 términos</span>
+                            <span class="arrow-glo">&#8594;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Flora y Fauna -->
+                <a href="glosario/carpeta.html" style="text-decoration:none; color:inherit; display:contents;">
+                    <div class="card-carpeta">
+                        <div class="header-card-c">
+                            <div class="icono-carpeta bg-verde-claro"><span class="ic-c-in">&#127811;</span></div>
+                            <button class="btn-kebab-glo">&#8942;</button>
+                        </div>
+                        <h2>Flora y Fauna</h2>
+                        <p>Especies animales, plantas</p>
+                        <div class="footer-card-c">
+                            <span class="pill-conteo">34 términos</span>
+                            <span class="arrow-glo">&#8594;</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Crear Nueva Categoria -->
+                <div class="card-crear-cat">
+                    <div class="btn-plus-circ">+</div >
+                    <span>Crear Nueva Categoría</span>
+                </div>
+
+            </section>
+
+            <!-- Bloque Inferior Flotante - Consejos IA -->
+            <div class="panel-consejo">
+                
+                <!-- Acciones flotantes superiores alineados al centro (Buscar, A-Z, Exportar, +) -->
+                <div class="barra-herramientas-glo">
+                    <button class="tool-ic-glo"><span class="t-icon">&#128269;</span><br>BUSCAR</button>
+                    <div class="div-t"></div>
+                    <button class="tool-ic-glo"><span class="t-icon">A-Z</span><br>A-Z</button>
+                    <div class="div-t"></div>
+                    <button class="tool-ic-glo"><span class="t-icon">&#10515;</span><br>EXPORTAR</button>
+                    <div class="div-t"></div>
+                    <button class="btn-fab-glo">+</button>
+                </div>
+
+                <div class="contenido-consejo">
+                    <div class="img-mock-glo">
+                        <span class="writing-mock">Writing</span><br>
+                        <span class="mini-mock">don't let perfection<br>sabotage your work</span>
+                    </div>
+                    <div class="textos-consejo">
+                        <h2>Consejo de Edición</h2>
+                        <p>Un glosario bien estructurado es el cimiento de la coherencia narrativa. Mantenga las categorías limpias y evite la duplicidad de términos. Recomendamos asignar etiquetas de color para identificar rápidamente el impacto de cada término en la trama principal.</p>
+                        <a href="#" class="link-ia-glo" style="pointer-events:none;"><span class="ic-ia">&#10024;</span> Sugerir categorías por IA</a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
